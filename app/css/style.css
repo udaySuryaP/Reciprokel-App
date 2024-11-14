@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Readex+Pro:wght@160..700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #F1F1F1;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", serif;
+    background-color: #F1F1F1;
+    color: #000E59;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 36px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 30px;
+    padding: 0px 56px;
+    height: 62px;
+}
+.navbar-left p{
+    background-color: white;
+    font-weight: 500;
+    font-size: 24px;
+}
+.navbar-center ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+    background-color: white;
+    list-style-type: none;
+}
+
+.navbar-center ul li a{
+    text-decoration: none;
+    font-style: normal;
+    background-color: white;
+    text-decoration: none;
+    color: #000E59;
+    font-size: 16px;
+}
+.navbar-right p{
+    background-color: white;
+
+}
+.hero{
+    width: 97.5vw;
+    height: 84vh;
+    background-image: url('/HeroBg.png');
+    margin-left: 18px;
+    margin-left: 18px;
+    border-radius: 36px;
+    margin-top: 18px;
+    color: white;
+
+}
+.hero-head{
+    background-color: #00000000;
+    font-size: 70px;
+    font-weight: 500;
+    position: relative;
+    top: 260px;
+    left: 94px;
+    width: fit-content;
+}
+.hero-sub-head{
+    background-color: #00000000;
+    font-size: 28px;
+    font-weight: 300;
+    max-width: 40vw;
+    position: relative;
+    top: 260px;
+    left: 94px;
+}
+.hero form{
+    background-color: #00000000;
+    position: relative;
+    top: 300px;
+    left: 94px;
+    width: fit-content;
+    background-color: white;
+    border-radius: 40px;
+    background-color: white;
+}
+.hero form input{
+    height: 20px;
+    width: 350px;
+    padding: 10px;
+    padding-left: 40px;
+    background: white;
+    border: 1px white solid;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.hero form button{
+    background-color: #000E59;
+    height: 40px;
+    width: 100px;
+    border: 1px white solid;
+    color: white;
+    border-radius: 20px;
+}
