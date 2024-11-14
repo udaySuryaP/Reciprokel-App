@@ -104,6 +104,10 @@ body{
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 }
+.hero form input:focus{
+    outline: none;
+    border: 1px white solid;
+}
 .hero form button{
     background-color: #000E59;
     height: 40px;
@@ -111,4 +115,178 @@ body{
     border: 1px white solid;
     color: white;
     border-radius: 20px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 9vw;
+    text-align: center;
+    margin-top: 50px;
+}
+.about-head{
+    font-size: 22px;
+    font-weight: 500;
+}
+.about-content{
+    font-size: 52px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+.about-learn-more{
+    background-color: #00000000;
+    border: 0px white solid;
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}   
+.about-learn-more img{
+    margin-left: 10px;
+    width: 14px;
+    height: 14px;
+}
+.fet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7vh 7vw;
+}
+.fet p{
+    background-color: #00000000;
+}
+.fet-head{
+    font-size: 32px;
+    font-weight: 500;
+    margin:0px 20px;
+}
+.fet-cot{
+    font-size: 16px;
+    font-weight: 200;
+    margin:0px 20px;
+}
+.fet-left{
+    width: 50%;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.fet-right{
+    width: 50%;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.fet-left-top{
+    flex: 1;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #000E59;
+    color: white;
+    background-image: url('/Pattern1.png');
+    background-position-y: -60px;
+    background-position-x: -20px;
+}
+.fet-left-center{
+    flex: 1;
+    margin-bottom: 10px;
+    display: flex;
+}
+.fet-left-bottom{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #000E59;
+    color: white;
+    border-radius: 28px;
+    padding-right:40px ;
+    height: 30vh;
+    background-image: url('/Pattern3.png');
+}
+.fet-left-bottom .fet-head{
+    margin-bottom: -60px;
+}
+.fet-right-bottom .fet-head{
+    margin-bottom: -60px;
+}
+
+.fet-left-center-left{
+    flex: 1;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    background-image: url('/Grid.png');
+    padding: 20px 0px;
+}
+.fet-left-center-left .fet-head, .fet-left-center-right .fet-head{
+    font-size: 24px;
+    font-weight:500 ;
+}
+.fet-left-center-left .fet-cot , .fet-left-center-right .fet-cot{
+    font-size: 14px;
+    font-weight:300 ;
+}
+.fet-left-center-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #4D61F4;
+    padding: 20px 0px;
+    color: white;
+    background-image: url('/Pattern2.png');
+}
+.fet-right-top{
+    flex:1;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    background-image: url('/Vector.png');
+    height: 600px;
+}
+.fet-right-top .fet-head{
+    margin-top: 20px;
+}
+.fet-right-top .fet-cot{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.fet-right-bottom{
+    /* flex:1; */
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #4D61F4;
+    padding-right:40px ;
+    color: white;
+    background-image: url('/Line.png');
 }
