@@ -6,13 +6,14 @@ import {
   Scripts,
   ScrollRestoration,
   json, 
-  redirect
+  MetaFunction
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import { db, serverTimestamp } from './firebase.js'
 import { addDoc, collection } from 'firebase/firestore';
 
 import './css/style.css'
+import './css/mobile/style.css'
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -27,6 +28,12 @@ export const links: LinksFunction = () => [
   },
 ];
 
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Reciprokel" },
+    { name: "description", content: "Welcome to the Reciprokel app!" },
+  ];
+};
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -44,6 +51,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
+
+
 
 export const action = async ({ request }: any) => {
   const formData = new URLSearchParams(await request.text());
@@ -88,6 +97,7 @@ export default function App() {
 
         <div className="navbar-right">
           <p>For Investors</p>
+          <img src="./Hamburgericon.png" alt="" />
         </div>
 
       </section>
@@ -103,7 +113,7 @@ export default function App() {
               required
               placeholder="Enter your email"
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Join the waitlist</button>
         </form>
 
       </section>
