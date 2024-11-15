@@ -31,7 +31,7 @@ body{
 .navbar-left p{
     background-color: white;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 }
 .navbar-center ul{
     display: flex;
@@ -49,16 +49,21 @@ body{
     background-color: white;
     text-decoration: none;
     color: #000E59;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px 0px;
 }
 .navbar-right p{
     background-color: white;
-
+    font-size: 14px;
+}
+.navbar-right img{
+    display: none;
 }
 .hero{
     width: 97.5vw;
     height: 84vh;
     background-image: url('/HeroBg.png');
+    background-size: cover;
     margin-left: 18px;
     margin-left: 18px;
     border-radius: 36px;
@@ -68,7 +73,7 @@ body{
 }
 .hero-head{
     background-color: #00000000;
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 500;
     position: relative;
     top: 260px;
@@ -77,8 +82,8 @@ body{
 }
 .hero-sub-head{
     background-color: #00000000;
-    font-size: 28px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 200;
     max-width: 40vw;
     position: relative;
     top: 260px;
@@ -104,11 +109,198 @@ body{
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 }
+.hero form input:focus{
+    outline: none;
+    border: 1px white solid;
+}
 .hero form button{
     background-color: #000E59;
     height: 40px;
-    width: 100px;
+    width: fit-content;
+    padding: 0px 30px;
     border: 1px white solid;
     color: white;
     border-radius: 20px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 9vw;
+    text-align: center;
+    margin-top: 50px;
+}
+.about-head{
+    font-size: 18px;
+    font-weight: 500;
+}
+.about-content{
+    font-size: 46px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+.about-learn-more{
+    background-color: #00000000;
+    border: 0px white solid;
+    margin-top: 30px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}   
+.about-learn-more img{
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+}
+.fet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7vh 7vw;
+}
+.fet p{
+    background-color: #00000000;
+}
+.fet-head{
+    font-size: 28px;
+    font-weight: 500;
+    margin:0px 20px;
+}
+.fet-cot{
+    font-size: 14px;
+    font-weight: 200;
+    margin:0px 20px;
+    width: 70%;
+}
+.fet-left{
+    width: 50%;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.fet-right{
+    width: 50%;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.fet-left-top{
+    flex: 1;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #000E59;
+    color: white;
+    background-image: url('/Pattern1.png');
+    background-position-y: -60px;
+    background-position-x: -20px;
+}
+.fet-left-center{
+    flex: 1;
+    margin-bottom: 10px;
+    display: flex;
+}
+.fet-left-bottom{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #000E59;
+    color: white;
+    border-radius: 28px;
+    padding-right:40px ;
+    height: 30vh;
+    background-image: url('/Pattern3.png');
+    background-size: cover;
+
+}
+.fet-left-bottom .fet-head{
+    margin-bottom: -60px;
+}
+.fet-right-bottom .fet-head{
+    margin-bottom: -60px;
+}
+
+.fet-left-center-left{
+    flex: 1;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    background-image: url('/Grid.png');
+    background-size: cover;
+    padding: 20px 0px;
+}
+.fet-left-center-left .fet-head, .fet-left-center-right .fet-head{
+    font-size: 20px;
+    font-weight:500 ;
+}
+.fet-left-center-left .fet-cot , .fet-left-center-right .fet-cot{
+    font-size: 14px;
+    font-weight:300 ;
+}
+.fet-left-center-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #4D61F4;
+    padding: 20px 0px;
+    color: white;
+    background-image: url('/Pattern2.png');
+    background-size: cover;
+}
+.fet-right-top{
+    flex:1;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    background-image: url('/Vector.png');
+    background-size: cover;
+    height: 600px;
+}
+.fet-right-top .fet-head{
+    margin-top: 20px;
+}
+.fet-right-top .fet-cot{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.fet-right-bottom{
+    /* flex:1; */
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 28px;
+    background-color: #4D61F4;
+    padding-right:40px ;
+    color: white;
+    background-image: url('/Line.png');
+    background-size: cover;
+
 }

@@ -6,13 +6,14 @@ import {
   Scripts,
   ScrollRestoration,
   json, 
-  redirect
+  MetaFunction
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import { db, serverTimestamp } from './firebase.js'
 import { addDoc, collection } from 'firebase/firestore';
 
 import './css/style.css'
+import './css/mobile/style.css'
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -27,6 +28,12 @@ export const links: LinksFunction = () => [
   },
 ];
 
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Reciprokel" },
+    { name: "description", content: "Welcome to the Reciprokel app!" },
+  ];
+};
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -45,7 +52,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export const action = async ({ request }) => {
+
+
+export const action = async ({ request }: any) => {
   const formData = new URLSearchParams(await request.text());
   const email = formData.get('email');
 
@@ -88,6 +97,7 @@ export default function App() {
 
         <div className="navbar-right">
           <p>For Investors</p>
+          <img src="./Hamburgericon.png" alt="" />
         </div>
 
       </section>
@@ -103,9 +113,48 @@ export default function App() {
               required
               placeholder="Enter your email"
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Join the waitlist</button>
         </form>
 
+      </section>
+
+      <section className="about" >
+        <p className="about-head" >ABOUT US</p>
+        <p className="about-content" >Our mission is to <span style={{color:'#4d61f4'}} >transform education</span> and empower growth through technology. We’re dedicated to providing institutions, students, and educators with tools to achieve, engage, and <span style={{color:'#4d61f4'}} >succeed</span> in a dynamic world.</p>
+        <button className="about-learn-more" >Learn More <img src="/Arrow1.png" alt="" /> </button>
+      </section>
+
+      <section className="fet">
+        <div className="fet-left">
+          <div className="fet-left-top">
+            <p className="fet-head">AI Insights to Drive Success</p>
+            <p className="fet-cot">Harness the power of AI to personalize learning, optimize course recommendations, and enhance student outcomes. Uncover how data-driven insights and adaptive assessments can elevate education at every level.</p>
+          </div>
+          <div className="fet-left-center">
+            <div className="fet-left-center-left">
+              <p className="fet-head">Effortless Attendance, Made Smart</p>
+              <p className="fet-cot">Forget roll calls and tedious logs. Our platform redefines attendance management with seamless tracking, analytics, and advanced options. Explore how we make every check-in count.</p>
+            </div>
+            <div className="fet-left-center-right">
+              <p className="fet-head">Assignments, Feedback, and More – All in One Place</p>
+              <p className="fet-cot">Say goodbye to paper trails and missed deadlines. From assignment creation to real-time grading and personalized feedback, discover a streamlined way for students and teachers to connect on what matters most.</p>
+            </div>
+          </div>
+          <div className="fet-left-bottom">
+            <p className="fet-head">Instant Notifications, Maximum Impact</p>
+            <p className="fet-cot">Never miss a beat with real-time alerts for deadlines, grades, events, and more. Our platform keeps everyone informed with customizable push notifications across devices. Discover how we keep communication flowing.</p>
+          </div>
+        </div>
+        <div className="fet-right">
+          <div className="fet-right-top">
+            <p className="fet-head">Student Progress, Visualized Like Never Before</p>
+            <p className="fet-cot">Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights. See how we turn data into growth.</p>
+          </div>
+          <div className="fet-right-bottom">
+            <p className="fet-head">Your Campus Community, Digitally Connected</p>
+            <p className="fet-cot">Whether it’s group projects, club meetings, or discussion boards, create vibrant communities and collaborative spaces for every need. Dive into an ecosystem that supports both learning and growth beyond the classroom.</p>
+          </div>
+        </div>
       </section>
     </div>
   )
