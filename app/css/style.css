@@ -304,3 +304,138 @@ body{
     background-size: cover;
 
 }
+
+
+/*  */
+
+.staytuned-btns{
+    display: none;
+}
+
+.stayTuned p {
+text-align: center;
+}
+.roadmap{
+    margin: 50px 0px ;
+    text-align: center;
+}
+.roadmap-top-title{
+    font-size: 18px;
+}
+.roadmap-top-head{
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 48px;
+}
+.roadmap-top-sub-head{
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 8px;
+    max-width: 60vw;
+    margin-left: 20vw;
+}
+.roadmap-bottom{
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 57px;
+    border-radius: 36px;
+    height: 70vh;
+    background-color: #000E59;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.roadmap-bottom-img1{
+    background-color: #00000000;
+    width: 90%;
+    height: 55vh;
+    position: relative;
+    top: -100px; 
+}
+.roadmap-bottom-img2{
+    position: relative;
+    background-color: #00000000;
+    right: -4%;
+    top: -90px;
+}
+.roadmap-b-item-1{
+    background-color: #00000000;
+}
+.roadmap-b-item-1 p{
+    background-color: #4d61f4d6;
+    color: white;
+    width: 20vw;
+    text-align: left;
+    padding: 12px;
+    position: relative;
+    top: 133px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    left: -23vw;
+}
+.roadmap-b-item-2{
+    background-color: #00000000;
+}
+.roadmap-b-item-2 p{
+    background-color: #4d61f4d6;
+    color: white;
+    width: 40vw;
+    text-align: left;
+    padding: 12px;
+    position: relative;
+    top: 163px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    left: -4vw;
+}
+.roadmap-b-item-3{
+    background-color: #00000000;
+}
+.roadmap-b-item-3 p{
+    background-color: #4d61f4d6;
+    color: white;
+    width: 14vw;
+    text-align: left;
+    padding: 12px;
+    position: relative;
+    top: 193px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    left: 9vw;
+}
+.roadmap-b-item-4{
+    background-color: #00000000;
+}
+.roadmap-b-item-4 p{
+    background-color: #4d61f4d6;
+    color: white;
+    width: 28vw;
+    text-align: left;
+    padding: 12px;
+    position: relative;
+    top: 213px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    left: 10vw;
+}
+.roadmap-b-item-5{
+    background-color: #00000000;
+}
+.roadmap-b-item-5 p{
+    background-color: #4d61f4d6;
+    color: white;
+    width: 20vw;
+    text-align: left;
+    padding: 12px;
+    position: relative;
+    top: 243px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    left: 30vw;
+}

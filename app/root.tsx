@@ -156,6 +156,45 @@ export default function App() {
           </div>
         </div>
       </section>
+      <section className="stayTuned" >
+        <p >Stay Tuned for More</p>
+        <div className="staytuned-btns">
+          <button>
+            <img src="/Arrowbtns.png" alt="" />
+          </button>
+          <button>
+            <img style={{transform: 'rotate(180deg)'}} src="/Arrowbtns.png" alt="" />
+          </button>
+        </div>
+      </section>
+      <section className="roadmap" >
+        <div className="roadmap-top">
+          <p className="roadmap-top-title" >ROADMAP</p>
+          <p className="roadmap-top-head" >Building a <span style={{color:'#4d61f4'}} >Seamless</span> Learning Experience</p>
+          <p className="roadmap-top-sub-head" >Our design process focuses on intuitive functionality and real-world impact, creating a transformative platform for students, educators, and institutions.</p>
+        </div>
+        <div className="roadmap-bottom-container">
+          <div className="roadmap-bottom">
+            <div className="roadmap-b-item-1">
+              <p>Initial Development</p>
+            </div>
+            <div className="roadmap-b-item-2">
+              <p>Early AI-Driven & Testing</p>
+            </div>
+            <div className="roadmap-b-item-3">
+              <p>Feature Expansion</p>
+            </div>
+            <div className="roadmap-b-item-4">
+              <p>Full Platform Rollout & Scaling</p>
+            </div>
+            <div className="roadmap-b-item-5">
+              <p>Growth & Innovation</p>
+            </div>
+            <img className="roadmap-bottom-img1" src="/Timelinevectors.png" alt="" />
+            <img className="roadmap-bottom-img2" src="/TimelineMeasures.png" alt="" />
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
