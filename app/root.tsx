@@ -6,8 +6,10 @@ import {
   Scripts,
   ScrollRestoration,
   json, 
-  MetaFunction
+  MetaFunction,
+  useFetcher,
 } from "@remix-run/react";
+import React,{useState,useRef} from "react";
 import type { LinksFunction } from "@remix-run/node";
 import { db, serverTimestamp } from './firebase.js'
 import { addDoc, collection } from 'firebase/firestore';
@@ -56,29 +58,89 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export const action = async ({ request }: any) => {
   const formData = new URLSearchParams(await request.text());
-  const email = formData.get('email');
+  const formType = formData.get('FormType')
 
-  if (!email) {
-    return json({ error: 'Email is required!' }, { status: 400 });
+  if (formType === 'form1'){
+    const email = formData.get('email');
+
+    if (!email) {
+      return json({ error: 'Email is required!' }, { status: 400 });
+    }
+
+    try {
+      await addDoc(collection(db, 'emails'), {
+        email: email,
+        timestamp: serverTimestamp(),
+      });
+
+      return json({ success: true });
+    } catch (error) {
+      console.error('Error saving email:', error);
+      return json({ error: 'Error saving email to database' }, { status: 500 });
+    }
   }
 
-  try {
-    // Save email to Firestore
-    await addDoc(collection(db, 'emails'), {
-      email: email,
-      timestamp: serverTimestamp(),
-    });
+  if(formType === 'form2'){
+    const name = formData.get('name')
+    const email2 = formData.get('email2')
+    const phone = formData.get('phone')
+    const msg = formData.get('msg')
 
-    return json({ success: true });
-  } catch (error) {
-    console.error('Error saving email:', error);
-    return json({ error: 'Error saving email to database' }, { status: 500 });
+    if(!name || !email2 || !msg){
+      return json({ error: 'All fields except phone are required!' }, { status: 400 });
+    }else{
+      try {
+        await addDoc(collection(db, 'enquiry'), {
+          name:name,
+          email: email2,
+          phone: phone,
+          msg: msg,
+          timestamp: serverTimestamp(),
+        })
+        return_msg()
+        
+        return json({ success: true })
+      } catch (error) {
+        console.error('Error saving email:', error);
+        return json({ error: 'Error saving email to database' }, { status: 500 });
+      }
+    }
   }
 };
 
+
+const return_msg = () =>{
+  console.log("function  usees useRef");
+  
+}
 export default function App() {
+
+  const fetcher = useFetcher();
+  const alert = useRef<HTMLDivElement>(null);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const response = await fetcher.submit(formData, { method: 'post' });
+
+    if (response == undefined){
+      if(alert.current){
+        alert.current.style.right = '10px'
+      }
+      setTimeout(()=>{
+        if(alert.current){
+          alert.current.style.right = '-400px'
+        }
+      },2000)
+    }
+    
+  };
   return(
     <div className="container" >
+
+      <section ref={alert} className="noti" >
+        <p>Successfully added data</p>
+      </section>
 
       <section className="navbar">
 
@@ -106,7 +168,8 @@ export default function App() {
         <p className="hero-head">Revolutionizing Learning <br /> & Professional Growth</p>
         <p className="hero-sub-head">Unlock the Future of Education with a Platform Designed for Impactful Engagement and Real-World Success.</p>
 
-        <form method="post">
+        <form onSubmit={handleSubmit}  >
+            <input type="hidden" name="FormType" value={"form1"} />
             <input
               type="email"
               name="email"
@@ -195,6 +258,28 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      <section className="get" >
+        <div className="get-top">
+          <p>Get in touch, <br /> We'd <span style={{color:'#4d61f4'}} >Love to Hear</span> From You</p>
+        </div>
+        <div className="get-bottom">
+          <fetcher.Form onSubmit={handleSubmit} >
+            <input type="hidden" name="FormType" value={"form2"} />
+            <div className="get-b-top">
+              <input type="text" placeholder="Your Name" required name="name" />
+              <input type="email" placeholder="Your Email" required name="email2" />
+              <input type="text" placeholder="Phone Number (Optional)" name="phone" />
+            </div>
+            <div className="get-b-b">
+              <textarea required rows={4} autoCorrect="false" placeholder="Message" name="msg" ></textarea>
+            </div>
+            <button type="submit" >Leave us a message <img src="/Arrow3.png" alt="" /> </button>
+          </fetcher.Form>
+        </div>
+      </section>
+
+      
     </div>
   )
 }
