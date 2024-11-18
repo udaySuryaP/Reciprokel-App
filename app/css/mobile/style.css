@@ -288,4 +288,52 @@ body{
     border-left: 5px #4D61F4 solid;
 }
 
+  
+.footor-container{
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+
+
+.footor-l-sub-head{
+    margin-bottom: 20px;
+}
+
+.footor-left form input{
+    flex: 1;
+    width: 50vw;
+}
+
+.footor-right{
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+    margin-right: 0px;
+    margin-top: 50px;
+}
+.footor-right p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.footor-r-left ul {
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -20px;
+}
+.footor-r-right{
+    margin-top: 30px;
+}
+.footor-cpwrite{
+    margin-top: -20px;
+}
+
 }
