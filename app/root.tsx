@@ -97,7 +97,26 @@ export const action = async ({ request }: any) => {
           msg: msg,
           timestamp: serverTimestamp(),
         })
-        return_msg()
+        
+        return json({ success: true })
+      } catch (error) {
+        console.error('Error saving email:', error);
+        return json({ error: 'Error saving email to database' }, { status: 500 });
+      }
+    }
+  }
+
+  if(formType === 'form3'){
+    const email3 = formData.get('email3')
+
+    if(!email3){
+      return json({ error: 'All fields except phone are required!' }, { status: 400 });
+    }else{
+      try {
+        await addDoc(collection(db, 'newsletter'), {
+          email: email3,
+          timestamp: serverTimestamp(),
+        })
         
         return json({ success: true })
       } catch (error) {
@@ -109,10 +128,6 @@ export const action = async ({ request }: any) => {
 };
 
 
-const return_msg = () =>{
-  console.log("function  usees useRef");
-  
-}
 export default function App() {
 
   const fetcher = useFetcher();
@@ -139,7 +154,7 @@ export default function App() {
     <div className="container" >
 
       <section ref={alert} className="noti" >
-        <p>Successfully added data</p>
+        <p>Successfully sent</p>
       </section>
 
       <section className="navbar">
@@ -279,7 +294,42 @@ export default function App() {
         </div>
       </section>
 
-      
+      <footer>
+
+        <div className="footor-container">
+          <div className="footor-left">
+            <p className="footor-l-head" >Reciprokel</p>
+            <p className="footor-l-sub-head" >Subscribe to receive news and updates</p>
+
+            <form onSubmit={handleSubmit}>
+              <input type="hidden" name="FormType" value={"form3"}/>
+              <input className="footor-l-f-input" type="email" name="email3" required/>
+              <button type="submit" ><img src="/Waitlistbtn.png" alt="" /></button>
+            </form>
+
+          </div>
+
+          <div className="footor-right">
+            <div className="footor-r-left">
+              <p>Company</p>
+              <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Roadmap</li>
+                <li>Contact us</li>
+              </ul>
+            </div>
+            <div className="footor-r-right">
+              <p>Info</p>
+              <ul>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p className="footor-cpwrite" >© 2024 Reciprokel. All rights reserved </p>
+      </footer>
     </div>
   )
 }
