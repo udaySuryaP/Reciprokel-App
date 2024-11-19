@@ -114,12 +114,14 @@ body{
 .hero form input::placeholder{
     opacity: 1;
     color: #000E59;
+    font-size: 14px;
 }
 .hero form input:focus{
     outline: none;
     border: 1px white solid;
 }
 .hero form button{
+    margin-top:2px ;
     background-color: #000E59;
     height: 50px;
     width: fit-content;
@@ -127,6 +129,8 @@ body{
     border: 1px white solid;
     color: white;
     border-radius: 30px;
+    font-size: 14px;
+    font-family: "Inter", serif;
 }
 .about{
     display: flex;
