@@ -517,13 +517,26 @@ text-align: center;
     justify-content: center;
     align-items: center;
     padding: 15px 40px;
-    border: 1px #000E59 solid;
+    border: 2px #000E59 solid;
     border-radius: 40px;
     margin-top: 50px;
     cursor: pointer;
     font-weight: 300;
+    transition: 0.2s;
+    font-weight: 500;
+    background-image: url('/Arrow3.png');
+    background-repeat: no-repeat;
+    background-position-x:187px ;
+    background-position-y:18px ;
+    padding-right: 80px;
+}
+.get button:hover{
+    background-color: white;
+    background-image: url('/Arrow3_dark.png');
+    color: #000E59;
 }
 .get img{
+
     background-color: #00000000;
     margin-top: 3px;
     margin-left: 20px;

@@ -242,7 +242,7 @@ import '../css/mobile/style.css'
               <div className="get-b-b">
                 <textarea required rows={4} autoCorrect="false" placeholder="Message" name="msg" ></textarea>
               </div>
-              <button type="submit" >Leave us a message <img src="/Arrow3.png" alt="" /> </button>
+              <button type="submit" >Leave us a message  </button>
             </fetcher.Form>
           </div>
         </section>
