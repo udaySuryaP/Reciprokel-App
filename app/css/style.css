@@ -151,7 +151,7 @@ body{
 }
 .about-head{
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .about-content{
     font-size: 46px;
@@ -339,6 +339,7 @@ text-align: center;
 }
 .roadmap-top-title{
     font-size: 18px;
+    font-weight: 600;
 }
 .roadmap-top-head{
     font-size: 48px;
