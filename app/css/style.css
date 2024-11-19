@@ -599,7 +599,7 @@ footer{
     justify-content: center;
     align-items: center;
     border-radius: 36px;
-    border: 3px #000E59 solid;
+    border: 1px #000E59 solid;
     overflow: hidden;
     margin-top: 10px;
 }
