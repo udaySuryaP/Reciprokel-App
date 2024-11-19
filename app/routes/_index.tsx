@@ -167,22 +167,22 @@ import '../css/mobile/style.css'
                 <p className="fet-cot">Forget roll calls and tedious logs. Our platform redefines attendance management with seamless tracking, analytics, and advanced options. Explore how we make every check-in count.</p>
               </div>
               <div className="fet-left-center-right">
-                <p className="fet-head">Assignments, Feedback, and More – All in One Place</p>
+                <p className="fet-head">Assignments,<br />Feedback, and More –<br />All in One Place</p>
                 <p className="fet-cot">Say goodbye to paper trails and missed deadlines. From assignment creation to real-time grading and personalized feedback, discover a streamlined way for students and teachers to connect on what matters most.</p>
               </div>
             </div>
             <div className="fet-left-bottom">
-              <p className="fet-head">Instant Notifications, Maximum Impact</p>
+              <p className="fet-head">Instant Notifications,<br />Maximum Impact</p>
               <p className="fet-cot">Never miss a beat with real-time alerts for deadlines, grades, events, and more. Our platform keeps everyone informed with customizable push notifications across devices. Discover how we keep communication flowing.</p>
             </div>
           </div>
           <div className="fet-right">
             <div className="fet-right-top">
-              <p className="fet-head">Student Progress, Visualized Like Never Before</p>
+              <p className="fet-head">Student Progress,<br />Visualized Like Never Before</p>
               <p className="fet-cot">Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights. See how we turn data into growth.</p>
             </div>
             <div className="fet-right-bottom">
-              <p className="fet-head">Your Campus Community, Digitally Connected</p>
+              <p className="fet-head">Your Campus Community,<br />Digitally Connected</p>
               <p className="fet-cot">Whether it’s group projects, club meetings, or discussion boards, create vibrant communities and collaborative spaces for every need. Dive into an ecosystem that supports both learning and growth beyond the classroom.</p>
             </div>
           </div>

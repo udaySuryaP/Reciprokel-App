@@ -184,12 +184,12 @@ body{
     background-color: #00000000;
 }
 .fet-head{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 500;
     margin:0px 20px;
 }
 .fet-cot{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 200;
     margin:0px 20px;
     width: 70%;
@@ -267,11 +267,11 @@ body{
     padding: 20px 0px;
 }
 .fet-left-center-left .fet-head, .fet-left-center-right .fet-head{
-    font-size: 20px;
+    font-size: 24px;
     font-weight:500 ;
 }
 .fet-left-center-left .fet-cot , .fet-left-center-right .fet-cot{
-    font-size: 14px;
+    font-size: 12px;
     font-weight:300 ;
 }
 .fet-left-center-right{
