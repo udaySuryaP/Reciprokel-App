@@ -30,8 +30,9 @@ body{
 }
 .navbar-left p{
     background-color: white;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -1px;
 }
 .navbar-center ul{
     display: flex;
