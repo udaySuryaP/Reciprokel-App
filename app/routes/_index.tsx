@@ -142,7 +142,7 @@ import '../css/mobile/style.css'
                 type="email"
                 name="email"
                 required
-                placeholder="Enter your email"
+                placeholder="Enter your email address"
               />
               <button type="submit">Join the waitlist</button>
           </form>
