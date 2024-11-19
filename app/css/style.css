@@ -575,6 +575,11 @@ footer{
     border-radius: 36px;
     padding: 0px 30px;
 }
+
+.footor-left form input::placeholder{
+    color: #000E59;
+    opacity: 1;
+}
 .footor-left form input:focus{
     border: 1px white;
     outline: none;
