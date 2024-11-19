@@ -131,6 +131,14 @@ body{
     border-radius: 30px;
     font-size: 14px;
     font-family: "Inter", serif;
+    transition: 0.2s;
+    margin-right: 2px;
+}
+.hero form button:hover{
+    background-color:white;
+    color: #000E59;
+    border: 2px #000E59 solid;
+    
 }
 .about{
     display: flex;
