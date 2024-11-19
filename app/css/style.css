@@ -477,17 +477,19 @@ text-align: center;
 .get-b-top input{
     flex:1;
     border: 0px white solid;
-    border-bottom: 1px black solid;
+    border-bottom: 1px #000E59 solid;
     padding: 30px 0px;
 }
 .get-b-top input:focus{
     border: 0px white solid;
-    border-bottom: 1px black solid;
+    border-bottom: 1px #000E59 solid;
     outline: none;
 }
 .get-b-top input::placeholder{
-    color: black;
+    color: #000E59;
     opacity: 1;
+    font-size: 20px;
+    font-weight: normal;
 }
 .get-b-b{
     display: flex;
@@ -497,18 +499,20 @@ text-align: center;
     padding: 30px 0px;
     flex: 1;
     border: 0px white solid;
-    border-bottom: 1px black solid;
+    border-bottom: 1px #000E59 solid;
     font-family: "Inter", serif;
     font-size: 13px;
 }
 .get-b-b textarea:focus{
     border: 0px white solid;
-    border-bottom: 1px black solid;
+    border-bottom: 1px #000E59 solid;
     outline: none;
 }
 .get-b-b textarea::placeholder{
-    color: black;
+    color: #000E59;
     opacity: 1;
+    font-size: 20px;
+    font-weight: normal;
 }
 .get button{
     background-color: #000E59;
