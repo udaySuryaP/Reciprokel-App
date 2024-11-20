@@ -3,6 +3,7 @@ import {
     json, 
     useFetcher,
     } from "@remix-run/react";
+import { useEffect } from "react";
 import React,{useRef} from "react";
 import {db,serverTimestamp,addDoc,collection} from '../firebase.js'
   
@@ -82,6 +83,8 @@ import '../css/mobile/style.css'
   
   
   export default function Index() {
+
+    
   
     const fetcher = useFetcher();
     const alert = useRef<HTMLDivElement>(null);
@@ -110,7 +113,7 @@ import '../css/mobile/style.css'
           <p>Successfully sent</p>
         </section>
   
-        <section className="navbar">
+        <section data-aos="fade-up" className="navbar">
   
           <div className="navbar-left">
             <p>Reciprockel</p>
@@ -149,47 +152,47 @@ import '../css/mobile/style.css'
   
         </section>
   
-        <section className="about" >
-          <p className="about-head" >ABOUT US</p>
-          <p className="about-content" >Our mission is to <span style={{color:'#4d61f4'}} >transform education</span> and empower growth through technology. We’re dedicated to providing institutions, students, and educators with tools to achieve, engage, and <span style={{color:'#4d61f4'}} >succeed</span> in a dynamic world.</p>
-          <button className="about-learn-more" >Learn More <img src="/Arrow1.png" alt="" /> </button>
+        <section data-aos="fade-up" className="about" >
+          <p data-aos="fade-up" className="about-head" >ABOUT US</p>
+          <p data-aos="fade-up" className="about-content" >Our mission is to <span style={{color:'#4d61f4'}} >transform education</span> and empower growth through technology. We’re dedicated to providing institutions, students, and educators with tools to achieve, engage, and <span style={{color:'#4d61f4'}} >succeed</span> in a dynamic world.</p>
+          <button data-aos="fade-up" className="about-learn-more" >Learn More <img src="/Arrow1.png" alt="" /> </button>
         </section>
   
-        <section className="fet">
+        <section  className="fet">
           <div className="fet-left">
-            <div className="fet-left-top">
+            <div data-aos="fade-up" className="fet-left-top">
               <p className="fet-head">AI Insights to Drive Success</p>
               <p className="fet-cot">Harness the power of AI to personalize learning, optimize course recommendations, and enhance student outcomes. Uncover how data-driven insights and adaptive assessments can elevate education at every level.</p>
             </div>
-            <div className="fet-left-center">
-              <div className="fet-left-center-left">
+            <div data-aos="fade-up" className="fet-left-center">
+              <div data-aos="fade-up" className="fet-left-center-left">
                 <p className="fet-head">Effortless Attendance, Made Smart</p>
                 <p className="fet-cot">Forget roll calls and tedious logs. Our platform redefines attendance management with seamless tracking, analytics, and advanced options. Explore how we make every check-in count.</p>
               </div>
-              <div className="fet-left-center-right">
+              <div data-aos="fade-up" className="fet-left-center-right">
                 <p className="fet-head">Assignments,<br />Feedback, and More –<br />All in One Place</p>
                 <p className="fet-cot">Say goodbye to paper trails and missed deadlines. From assignment creation to real-time grading and personalized feedback, discover a streamlined way for students and teachers to connect on what matters most.</p>
               </div>
             </div>
-            <div className="fet-left-bottom">
+            <div data-aos="fade-up" className="fet-left-bottom">
               <p className="fet-head">Instant Notifications,<br />Maximum Impact</p>
               <p className="fet-cot">Never miss a beat with real-time alerts for deadlines, grades, events, and more. Our platform keeps everyone informed with customizable push notifications across devices. Discover how we keep communication flowing.</p>
             </div>
           </div>
           <div className="fet-right">
-            <div className="fet-right-top">
+            <div data-aos="fade-up" className="fet-right-top">
               <p className="fet-head">Student Progress,<br />Visualized Like Never Before</p>
               <p className="fet-cot">Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights. See how we turn data into growth.</p>
             </div>
-            <div className="fet-right-bottom">
+            <div data-aos="fade-up" className="fet-right-bottom">
               <p className="fet-head">Your Campus Community,<br />Digitally Connected</p>
               <p className="fet-cot">Whether it’s group projects, club meetings, or discussion boards, create vibrant communities and collaborative spaces for every need. Dive into an ecosystem that supports both learning and growth beyond the classroom.</p>
             </div>
           </div>
         </section>
         <section className="stayTuned" >
-          <p >Stay Tuned for More</p>
-          <div className="staytuned-btns">
+          <p data-aos="fade-up" >Stay Tuned for More</p>
+          <div data-aos="fade-up" className="staytuned-btns">
             <button>
               <img src="/Arrowbtns.png" alt="" />
             </button>
@@ -198,7 +201,7 @@ import '../css/mobile/style.css'
             </button>
           </div>
         </section>
-        <section className="roadmap" >
+        <section data-aos="fade-up" className="roadmap" >
           <div className="roadmap-top">
             <p className="roadmap-top-title" >ROADMAP</p>
             <p className="roadmap-top-head" >Building a <span style={{color:'#4d61f4'}} >Seamless</span> Learning Experience</p>
@@ -228,10 +231,10 @@ import '../css/mobile/style.css'
         </section>
   
         <section className="get" >
-          <div className="get-top">
+          <div data-aos="fade-up" className="get-top">
             <p>Get in touch, <br /> We'd <span style={{color:'#4d61f4'}} >Love to Hear</span> From You</p>
           </div>
-          <div className="get-bottom">
+          <div data-aos="fade-up" className="get-bottom">
             <fetcher.Form onSubmit={handleSubmit} >
               <input type="hidden" name="FormType" value={"form2"} />
               <div className="get-b-top">
@@ -249,7 +252,7 @@ import '../css/mobile/style.css'
   
         <footer>
   
-          <div className="footor-container">
+          <div data-aos="fade-up" className="footor-container">
             <div className="footor-left">
               <p className="footor-l-head" >Reciprokel</p>
               <p className="footor-l-sub-head" >Subscribe to receive news and updates</p>
@@ -281,8 +284,9 @@ import '../css/mobile/style.css'
             </div>
           </div>
   
-          <p className="footor-cpwrite" >© 2024 Reciprokel. All rights reserved </p>
+          <p data-aos="fade-up" className="footor-cpwrite" >© 2024 Reciprokel. All rights reserved </p>
         </footer>
+        
       </body>
     )
   }
