@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Readex+Pro:wght@160..700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #F1F1F1;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", serif;
+    background-color: #F1F1F1;
+    color: #000E59;
+}
+.cmsoon-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.cmsoon-container p{
+    letter-spacing: -2.4px;
+    font-size: 100px;
+}
+.cmsoon-container a{
+    background-color: #000E59;
+    border:1px #00000000 solid;
+    margin-top: 20px;
+    padding: 7px 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+
+.cmsoon-container img{
+    transform: rotate(180deg);
+    background-color: #00000000;
+    margin-right: 10px;
+}
