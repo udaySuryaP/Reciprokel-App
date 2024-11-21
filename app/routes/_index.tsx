@@ -139,7 +139,7 @@ import '../css/mobile/style.css'
   
           <div className="navbar-center">
             <ul style={{right:navbar ? '-20px' : '-400px'}}  >
-              <li><Link to='/cmsoon' >Home</Link></li>
+              <li><Link to='/' >Home</Link></li>
               <li><Link to='/cmsoon' >About us</Link></li>
               <li><Link to='/cmsoon' >Roadmap</Link></li>
               <li><Link to='/cmsoon' >Contact Us</Link></li>
@@ -147,7 +147,7 @@ import '../css/mobile/style.css'
           </div>
   
           <div className="navbar-right">
-            <p>For Investors</p>
+            <p><Link to={'/cmsoon'} >For Investors</Link></p>
             <button className="hamBar" style={{opacity:navbar?0:1}} onClick={navbar_handle} ><img src="./Hamburgericon.png" alt="" /></button>
             <button className="backBar" style={{opacity:navbar?1:0}}  onClick={navbar_handle} ><img src="./Arrow3.png" alt="" /></button>
           </div>
@@ -155,7 +155,7 @@ import '../css/mobile/style.css'
         </section>
   
         <section className="hero" >
-          <p className="hero-head">Revolutionizing Learning <br /> & Professional Growth</p>
+          <p className="hero-head">Revolutionizing Learning <br /> & Professional Growth.</p>
           <p className="hero-sub-head">Unlock the Future of Education with a Platform Designed for Impactful Engagement and Real-World Success.</p>
   
           <form onSubmit={handleSubmit}  >
