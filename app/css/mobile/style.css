@@ -55,6 +55,9 @@ body{
 .navbar-right{
     background-color: white;
 }
+.navbar-right button{
+    visibility: visible;
+}
 .navbar-right img{
     display: flex;
     background-color: #000E59;

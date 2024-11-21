@@ -73,6 +73,9 @@ body{
 .navbar-right img{
     display: none;
 }
+.navbar-right button{
+    visibility: hidden;
+}
 .hero{
     width: 97.5vw;
     height: 84vh;
