@@ -34,6 +34,11 @@ body{
     font-size: 24px;
     letter-spacing: -1px;
 }
+.navbar-left a{
+    color: #000E59;
+    background-color: white;
+    text-decoration: none;
+}
 .navbar-center ul{
     display: flex;
     flex-direction: row;
@@ -60,7 +65,7 @@ body{
     align-items: center;
 }
 .navbar-right p{
-    font-size: 16px;
+    font-size: 18px;
     background-color: white;
     font-weight: 500;
 
@@ -348,12 +353,12 @@ body{
 
 .stayTuned p {
     text-align: center;
-    margin-top: -20px;
+    margin-top: -28px;
 }
 .roadmap{
     margin: 50px 0px ;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .roadmap-top-title{
     font-size: 18px;
@@ -388,19 +393,22 @@ body{
     width: 90%;
     height: 55vh;
     position: relative;
-    top: -100px; 
+    top: -100px;
+    z-index: 0; 
 }
 .roadmap-bottom-img2{
     position: relative;
     background-color: #00000000;
     right: -4%;
     top: -90px;
+    z-index: 0;
+
 }
 .roadmap-b-item-1{
     background-color: #00000000;
 }
 .roadmap-b-item-1 p{
-    background-color: #4d61f4d6;
+    background-color: #4d61f4;
     color: white;
     width: 20vw;
     text-align: left;
@@ -411,12 +419,13 @@ body{
     font-size: 15px;
     font-weight: 300;
     left: -23vw;
+    z-index: 2;
 }
 .roadmap-b-item-2{
     background-color: #00000000;
 }
 .roadmap-b-item-2 p{
-    background-color: #4d61f4d6;
+    background-color: #4d61f4;
     color: white;
     width: 40vw;
     text-align: left;
@@ -426,13 +435,14 @@ body{
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
+    z-index: 2;
     left: -4vw;
 }
 .roadmap-b-item-3{
     background-color: #00000000;
 }
 .roadmap-b-item-3 p{
-    background-color: #4d61f4d6;
+    background-color: #4d61f4;
     color: white;
     width: 14vw;
     text-align: left;
@@ -442,13 +452,14 @@ body{
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
+    z-index: 2;
     left: 9vw;
 }
 .roadmap-b-item-4{
     background-color: #00000000;
 }
 .roadmap-b-item-4 p{
-    background-color: #4d61f4d6;
+    background-color: #4d61f4;
     color: white;
     width: 28vw;
     text-align: left;
@@ -458,13 +469,14 @@ body{
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
+    z-index: 2;
     left: 10vw;
 }
 .roadmap-b-item-5{
     background-color: #00000000;
 }
 .roadmap-b-item-5 p{
-    background-color: #4d61f4d6;
+    background-color: #4d61f4;
     color: white;
     width: 16vw;
     text-align: left;
@@ -473,6 +485,7 @@ body{
     top: 313px;
     border-radius: 12px;
     font-size: 15px;
+    z-index: 2;
     font-weight: 300;
     left: 32vw;
 }
@@ -510,7 +523,7 @@ body{
     color: #000E59;
     opacity: 1;
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 200;
 }
 .get-b-b{
     display: flex;
@@ -533,7 +546,7 @@ body{
     color: #000E59;
     opacity: 1;
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 200;
 }
 .get button{
     background-color: #000E59;
@@ -691,7 +704,7 @@ footer{
     list-style: none;
     text-decoration: none;
     background-color: white;
-    margin-top: 8px;
+    margin-top: 14px;
     font-weight: 300;
 }
 .footor-r-left ul li a,.footor-r-right ul li a{
