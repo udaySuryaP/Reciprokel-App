@@ -134,7 +134,7 @@ import '../css/mobile/style.css'
         <section data-aos="fade-up" className="navbar">
   
           <div className="navbar-left">
-            <p><Link to={'/'} >Reciprockel</Link></p>
+            <p><Link to={'/'} >Reciprockel App</Link></p>
           </div>
   
           <div className="navbar-center">
