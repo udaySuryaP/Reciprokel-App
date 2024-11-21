@@ -134,7 +134,7 @@ import '../css/mobile/style.css'
         <section data-aos="fade-up" className="navbar">
   
           <div className="navbar-left">
-            <p>Reciprockel</p>
+            <p><Link to={'/'} >Reciprockel</Link></p>
           </div>
   
           <div className="navbar-center">
@@ -154,7 +154,7 @@ import '../css/mobile/style.css'
   
         </section>
   
-        <section className="hero" >
+        <section data-aos="fade-up" className="hero" >
           <p className="hero-head">Revolutionizing Learning <br /> & Professional Growth.</p>
           <p className="hero-sub-head">Unlock the Future of Education with a Platform Designed for Impactful Engagement and Real-World Success.</p>
   
@@ -330,7 +330,7 @@ import '../css/mobile/style.css'
               <div className="footor-r-right">
                 <p>Info</p>
                 <ul>
-                  <li>Blog</li>
+                <li><Link to='/cmsoon' >Blog</Link></li>
                 </ul>
               </div>
             </div>
