@@ -188,11 +188,11 @@ import '../css/mobile/style.css'
             <div data-aos="fade-up" className="fet-left-center">
               <div data-aos="fade-up" className="fet-left-center-left">
                 <p className="fet-head">Effortless Attendance, Made Smart</p>
-                <p className="fet-cot">Forget roll calls and tedious logs. Our platform redefines attendance management with seamless tracking, analytics, and advanced options. Explore how we make every check-in count.</p>
+                <p className="fet-cot">Forget roll calls and tedious logs. Our platform revolutionizes attendance with seamless tracking and analytics.</p>
               </div>
               <div data-aos="fade-up" className="fet-left-center-right">
-                <p className="fet-head">Assignments,<br />Feedback, and More –<br />All in One Place</p>
-                <p className="fet-cot">Say goodbye to paper trails and missed deadlines. From assignment creation to real-time grading and personalized feedback, discover a streamlined way for students and teachers to connect on what matters most.</p>
+                <p className="fet-head">All-in-One<br />for Assignments,<br />Feedback, and More</p>
+                <p className="fet-cot">Streamline assignments, real-time grading, and personalized feedback for effortless student-teacher connection.</p>
               </div>
             </div>
             <div data-aos="fade-up" className="fet-left-bottom">
@@ -225,7 +225,7 @@ import '../css/mobile/style.css'
         <section data-aos="fade-up" className="roadmap" >
           <div className="roadmap-top">
             <p className="roadmap-top-title" >ROADMAP</p>
-            <p className="roadmap-top-head" >Building a <span style={{color:'#4d61f4'}} >Seamless</span> Learning Experience</p>
+            <p className="roadmap-top-head" >Building a <span style={{color:'#4d61f4'}} >Seamless</span> Learning Experience.</p>
             <p className="roadmap-top-sub-head" >Our design process focuses on intuitive functionality and real-world impact, creating a transformative platform for students, educators, and institutions.</p>
           </div>
           <div className="roadmap-bottom-container">
@@ -257,7 +257,7 @@ import '../css/mobile/style.css'
   
         <section className="get" >
           <div data-aos="fade-up" className="get-top">
-            <p>Get in touch, <br /> We'd <span style={{color:'#4d61f4'}} >Love to Hear</span> From You</p>
+            <p>Get in touch, <br /> We'd <span style={{color:'#4d61f4'}} >Love to Hear</span> From You.</p>
           </div>
           <div data-aos="fade-up" className="get-bottom">
             <fetcher.Form onSubmit={handleSubmit} >
@@ -300,8 +300,8 @@ import '../css/mobile/style.css'
   
           <div data-aos="fade-up" className="footor-container">
             <div className="footor-left">
-              <p className="footor-l-head" >Reciprokel</p>
-              <p className="footor-l-sub-head" >Subscribe to receive news and updates</p>
+              <p className="footor-l-head" >Reciprokel App.</p>
+              <p className="footor-l-sub-head" >Subscribe to receive news and updates.</p>
   
               <form onSubmit={handleSubmit}>
                 <input type="hidden" name="FormType" value={"form3"}/>
