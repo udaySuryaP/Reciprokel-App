@@ -312,7 +312,7 @@ import '../css/mobile/style.css'
                   onChange={(e) => setNewLetter(e.target.value)}
                   type="email" 
                   name="email3" required/>
-                <button type="submit" ><img src="/Waitlistbtn.png" alt="" /></button>
+                <button type="submit" ></button>
               </form>
   
             </div>
