@@ -86,7 +86,7 @@ body{
 .hero{
     flex: 1;
     max-width: 95vw;
-    height: 84vh;
+    height: 60vh;
     margin-left: 10px;
     margin-right: 0px;
     border-radius: 36px;
@@ -96,16 +96,17 @@ body{
 }
 .hero-head{
     background-color: #00000000;
-    font-size:30px;
+    font-size:28px;
     font-weight: 500;
     position: relative;
     top: 200px;
     left: 10px;
+    letter-spacing: -1px;
     width: fit-content;
 }
 .hero-sub-head{
     background-color: #00000000;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 200;
     max-width: 80vw;
     position: relative;
@@ -113,27 +114,39 @@ body{
     left: 10px;
 }
 .hero form{
-    top: 300px;
+    top: 250px;
     left: 10px;
-    width: 90vw;
+    width: 80vw;
+    height: auto;
     display: flex;
     border-radius: 20px;
+
 }
 
 .hero form button{
     width: 50vw;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 8px;
+    margin-bottom: 2px;
 }
-
+.hero form input{
+    height: 20px;
+}
+.hero form input::placeholder{
+    font-size: 10px;
+}
 .about-head{
-    font-size: 14px;
+    font-size: 10px;
 }
 .about-content{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 10px;
+    width: 90vw;
 }
 .about-learn-more{
-    font-size: 12px;
+    font-size: 9px;
 }   
 
 .fet{
@@ -162,16 +175,20 @@ body{
 
 .fet-right-top{
     flex:1;
+    border-radius: 20px;
     margin-bottom: 10px;
 }
 .fet-right-top .fet-head{
     margin-top: 50px;
     margin-bottom: 50px;
     max-width: 70%;
+    font-size: 28px;
 }
 .fet-right-top .fet-cot{
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: 60px;
+    font-size: 18px;
+    width: 80%;
 }
 .fet-right-bottom{
     display: none;
@@ -182,6 +199,7 @@ body{
     align-items: center;
     margin: 0px 36px;
     font-weight: 300;
+    margin-top: -50px;
 }
 .staytuned-btns{
     display: flex;
@@ -202,7 +220,7 @@ body{
 
 
 .roadmap-top-title{
-    font-size:11px;
+    font-size:10px;
 }
 .roadmap-top-head{
     font-size: 28px;
@@ -228,9 +246,19 @@ body{
     padding-bottom: -500px;
     overflow-x: scroll;
     overflow-y: hidden;
-    border-radius: 36px;
+    border-radius: 20px;
 }
-
+.roadmap-addon{
+    display: flex;
+    margin: 0px 36px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -20px;
+}
+.roadmap-addon p{
+    font-size: 14px;
+    font-weight: 300;
+}
 .roadmap-bottom-img1{
     top: -16vh; 
 }
@@ -272,6 +300,7 @@ body{
     width: 90vw;
     margin-left:5vw ;
     overflow-x:hidden ;
+    margin-top: 50px;
 }
 .get-top p{
     font-size: 28px;
@@ -279,7 +308,7 @@ body{
 .get-b-top{
     flex-direction: column;
     flex: 1;
-    gap: 30px;
+    gap: 10px;
 }
 .get-b-top input{
     flex:1;
@@ -295,14 +324,20 @@ body{
     margin-top: 30px;
     max-height: 15px;
 }
+.get-b-top input::placeholder{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.7px;
+}
 .get-b-b textarea:focus{
     border: 0px white solid;
     border-bottom: 1px black solid;
     outline: none;
 }
 .get-b-b textarea::placeholder{
-    color: black;
-    opacity: 1;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.7px;
 }
 .get button{
     background-color: #000E59;
@@ -310,7 +345,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 40px;
+    padding: 15px 20px;
+    padding-right: 100px;
     border: 1px #000E59 solid;
     border-radius: 40px;
     margin-top: 50px;
@@ -343,7 +379,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: white;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 50px;
 }
 
@@ -351,6 +387,8 @@ body{
 
 .footor-l-sub-head{
     margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 300;
 }
 
 .footor-left form input{
@@ -378,10 +416,13 @@ body{
     margin-top: -20px;
 }
 .footor-r-right{
-    margin-top: 30px;
+    margin-top: 10px;
+}
+.footor-r-right ul{
+    margin-top: -10px;
 }
 .footor-cpwrite{
-    margin-top: -20px;
+    margin-top: -40px;
 }
 
 }

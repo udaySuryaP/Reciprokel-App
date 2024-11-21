@@ -234,6 +234,10 @@ import '../css/mobile/style.css'
             </div>
           </div>
         </section>
+
+        <section className="roadmap-addon" >
+          <p>Swipe <img src="/Arrow13.png" alt="" /></p>
+        </section>
   
         <section className="get" >
           <div data-aos="fade-up" className="get-top">
@@ -289,7 +293,7 @@ import '../css/mobile/style.css'
             </div>
           </div>
   
-          <p data-aos="fade-up" className="footor-cpwrite" >© 2024 Reciprokel. All rights reserved </p>
+          <p  className="footor-cpwrite" >© 2024 Reciprokel. All rights reserved </p>
         </footer>
         
       </body>
