@@ -86,6 +86,14 @@ import '../css/mobile/style.css'
 
     const [navbar,setNavbar] = useState(false)
 
+    const [waitlist,setWaitlist] = useState('')
+
+    const [get_name,setGet_Name] = useState('')
+    const [get_phone,setGet_phone] = useState('')
+    const [get_email,setGet_email] = useState('')
+    const [get_msg,setGet_msg] = useState('')
+
+    const [newsLetter,setNewLetter] = useState('')
     const navbar_handle = () =>{
       setNavbar(!navbar)
     }
@@ -105,6 +113,12 @@ import '../css/mobile/style.css'
         setTimeout(()=>{
           if(alert.current){
             alert.current.style.right = '-400px'
+            setWaitlist('')
+            setGet_Name('')
+            setGet_email('')
+            setGet_phone('')
+            setGet_msg('')
+            setNewLetter('')
           }
         },2000)
       }
@@ -149,6 +163,8 @@ import '../css/mobile/style.css'
               <input
                 type="email"
                 name="email"
+                value={waitlist}
+                onChange={(e) => setWaitlist(e.target.value)}
                 required
                 placeholder="Enter your email address"
               />
@@ -247,12 +263,33 @@ import '../css/mobile/style.css'
             <fetcher.Form onSubmit={handleSubmit} >
               <input type="hidden" name="FormType" value={"form2"} />
               <div className="get-b-top">
-                <input type="text" placeholder="Your Name" required name="name" />
-                <input type="email" placeholder="Your Email" required name="email2" />
-                <input type="text" placeholder="Phone Number (Optional)" name="phone" />
+                <input 
+                  type="text" 
+                  placeholder="Your Name" required 
+                  value={get_name}
+                  onChange={(e) => setGet_Name(e.target.value)}
+                  name="name" />
+                <input 
+                  type="email" 
+                  placeholder="Your Email" required 
+                  value={get_email}
+                  onChange={(e) => setGet_email(e.target.value)}
+                  name="email2" />
+                <input 
+                  type="text" 
+                  placeholder="Phone Number (Optional)" 
+                  value={get_phone}
+                  onChange={(e) => setGet_phone(e.target.value)} 
+                  name="phone" />
               </div>
               <div className="get-b-b">
-                <textarea required rows={4} autoCorrect="false" placeholder="Message" name="msg" ></textarea>
+                <textarea required 
+                  rows={4} 
+                  autoCorrect="false" 
+                  placeholder="Message" 
+                  value={get_msg}
+                  onChange={(e) => setGet_msg(e.target.value)}
+                  name="msg" ></textarea>
               </div>
               <button type="submit" >Leave us a message  </button>
             </fetcher.Form>
@@ -268,7 +305,13 @@ import '../css/mobile/style.css'
   
               <form onSubmit={handleSubmit}>
                 <input type="hidden" name="FormType" value={"form3"}/>
-                <input placeholder="Enter you email address" className="footor-l-f-input" type="email" name="email3" required/>
+                <input 
+                  placeholder="Enter you email address" 
+                  className="footor-l-f-input" 
+                  value={newsLetter}
+                  onChange={(e) => setNewLetter(e.target.value)}
+                  type="email" 
+                  name="email3" required/>
                 <button type="submit" ><img src="/Waitlistbtn.png" alt="" /></button>
               </form>
   
