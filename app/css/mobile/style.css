@@ -21,19 +21,67 @@ body{
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 15px;
+    position: relative;
+    z-index: 1;
 }
 
 .navbar-center ul{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    height: 100vh;
+    background-color: #000E59;
+    color: white;
+    z-index: 2;
+    right: -400px;
+    transition: 0.5s;
+    width: 50vw;
+    top: -200px;
+    
+}
+.navbar-center ul li{
+    margin-top: 20px;
+}
+.navbar-center ul li a{
+    margin-top: 20px;
+    background-color: #000E59;
+    color: white;
 }
 .navbar-right p{
     display: none;
+}
+.navbar-right{
+    background-color: white;
 }
 .navbar-right img{
     display: flex;
     background-color: #000E59;
     border-radius: 10px;
     padding: 10px;
+}
+.hamBar{
+    position: absolute;
+    background-color: white;
+    border: 0px white solid;
+    outline: none;
+    top: 15px;
+    right: 30px;
+    transition: 0.2s;
+    opacity: 1;
+}
+.backBar{
+    position: absolute;
+    background-color: white;
+    border: 0px white solid;
+    outline: none;
+    top: 15px;
+    transition: 0.2s;
+    right: 30px;
+    opacity: 0;
+    z-index: 5;
+    border-radius: 20px;
 }
 .hero{
     flex: 1;
@@ -44,7 +92,7 @@ body{
     border-radius: 36px;
     margin-top: 18px;
     color: white;
-
+    position: relative;
 }
 .hero-head{
     background-color: #00000000;

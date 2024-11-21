@@ -3,7 +3,7 @@ import {
     json, 
     useFetcher,
     } from "@remix-run/react";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import React,{useRef} from "react";
 import {db,serverTimestamp,addDoc,collection} from '../firebase.js'
   
@@ -84,7 +84,11 @@ import '../css/mobile/style.css'
   
   export default function Index() {
 
-    
+    const [navbar,setNavbar] = useState(false)
+
+    const navbar_handle = () =>{
+      setNavbar(!navbar)
+    }
   
     const fetcher = useFetcher();
     const alert = useRef<HTMLDivElement>(null);
@@ -120,7 +124,7 @@ import '../css/mobile/style.css'
           </div>
   
           <div className="navbar-center">
-            <ul>
+            <ul style={{right:navbar ? '-20px' : '-400px'}}  >
               <li><Link to='/cmsoon' >Home</Link></li>
               <li><Link to='/cmsoon' >About us</Link></li>
               <li><Link to='/cmsoon' >Roadmap</Link></li>
@@ -130,7 +134,8 @@ import '../css/mobile/style.css'
   
           <div className="navbar-right">
             <p>For Investors</p>
-            <img src="./Hamburgericon.png" alt="" />
+            <button className="hamBar" style={{opacity:navbar?0:1}} onClick={navbar_handle} ><img src="./Hamburgericon.png" alt="" /></button>
+            <button className="backBar" style={{opacity:navbar?1:0}}  onClick={navbar_handle} ><img src="./Arrow3.png" alt="" /></button>
           </div>
   
         </section>
