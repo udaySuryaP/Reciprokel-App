@@ -3,7 +3,7 @@ import {
     json, 
     useFetcher,
     } from "@remix-run/react";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import React,{useRef} from "react";
 import {db,serverTimestamp,addDoc,collection} from '../firebase.js'
   
@@ -84,7 +84,19 @@ import '../css/mobile/style.css'
   
   export default function Index() {
 
-    
+    const [navbar,setNavbar] = useState(false)
+
+    const [waitlist,setWaitlist] = useState('')
+
+    const [get_name,setGet_Name] = useState('')
+    const [get_phone,setGet_phone] = useState('')
+    const [get_email,setGet_email] = useState('')
+    const [get_msg,setGet_msg] = useState('')
+
+    const [newsLetter,setNewLetter] = useState('')
+    const navbar_handle = () =>{
+      setNavbar(!navbar)
+    }
   
     const fetcher = useFetcher();
     const alert = useRef<HTMLDivElement>(null);
@@ -101,6 +113,12 @@ import '../css/mobile/style.css'
         setTimeout(()=>{
           if(alert.current){
             alert.current.style.right = '-400px'
+            setWaitlist('')
+            setGet_Name('')
+            setGet_email('')
+            setGet_phone('')
+            setGet_msg('')
+            setNewLetter('')
           }
         },2000)
       }
@@ -120,8 +138,8 @@ import '../css/mobile/style.css'
           </div>
   
           <div className="navbar-center">
-            <ul>
-              <li><Link to='/cmsoon' >Home</Link></li>
+            <ul style={{right:navbar ? '-20px' : '-400px'}}  >
+              <li><Link to='/' >Home</Link></li>
               <li><Link to='/cmsoon' >About us</Link></li>
               <li><Link to='/cmsoon' >Roadmap</Link></li>
               <li><Link to='/cmsoon' >Contact Us</Link></li>
@@ -129,14 +147,15 @@ import '../css/mobile/style.css'
           </div>
   
           <div className="navbar-right">
-            <p>For Investors</p>
-            <img src="./Hamburgericon.png" alt="" />
+            <p><Link to={'/cmsoon'} >For Investors</Link></p>
+            <button className="hamBar" style={{opacity:navbar?0:1}} onClick={navbar_handle} ><img src="./Hamburgericon.png" alt="" /></button>
+            <button className="backBar" style={{opacity:navbar?1:0}}  onClick={navbar_handle} ><img src="./Arrow3.png" alt="" /></button>
           </div>
   
         </section>
   
         <section className="hero" >
-          <p className="hero-head">Revolutionizing Learning <br /> & Professional Growth</p>
+          <p className="hero-head">Revolutionizing Learning <br /> & Professional Growth.</p>
           <p className="hero-sub-head">Unlock the Future of Education with a Platform Designed for Impactful Engagement and Real-World Success.</p>
   
           <form onSubmit={handleSubmit}  >
@@ -144,6 +163,8 @@ import '../css/mobile/style.css'
               <input
                 type="email"
                 name="email"
+                value={waitlist}
+                onChange={(e) => setWaitlist(e.target.value)}
                 required
                 placeholder="Enter your email address"
               />
@@ -229,6 +250,10 @@ import '../css/mobile/style.css'
             </div>
           </div>
         </section>
+
+        <section className="roadmap-addon" >
+          <p>Swipe <img src="/Arrow13.png" alt="" /></p>
+        </section>
   
         <section className="get" >
           <div data-aos="fade-up" className="get-top">
@@ -238,12 +263,33 @@ import '../css/mobile/style.css'
             <fetcher.Form onSubmit={handleSubmit} >
               <input type="hidden" name="FormType" value={"form2"} />
               <div className="get-b-top">
-                <input type="text" placeholder="Your Name" required name="name" />
-                <input type="email" placeholder="Your Email" required name="email2" />
-                <input type="text" placeholder="Phone Number (Optional)" name="phone" />
+                <input 
+                  type="text" 
+                  placeholder="Your Name" required 
+                  value={get_name}
+                  onChange={(e) => setGet_Name(e.target.value)}
+                  name="name" />
+                <input 
+                  type="email" 
+                  placeholder="Your Email" required 
+                  value={get_email}
+                  onChange={(e) => setGet_email(e.target.value)}
+                  name="email2" />
+                <input 
+                  type="text" 
+                  placeholder="Phone Number (Optional)" 
+                  value={get_phone}
+                  onChange={(e) => setGet_phone(e.target.value)} 
+                  name="phone" />
               </div>
               <div className="get-b-b">
-                <textarea required rows={4} autoCorrect="false" placeholder="Message" name="msg" ></textarea>
+                <textarea required 
+                  rows={4} 
+                  autoCorrect="false" 
+                  placeholder="Message" 
+                  value={get_msg}
+                  onChange={(e) => setGet_msg(e.target.value)}
+                  name="msg" ></textarea>
               </div>
               <button type="submit" >Leave us a message  </button>
             </fetcher.Form>
@@ -259,7 +305,13 @@ import '../css/mobile/style.css'
   
               <form onSubmit={handleSubmit}>
                 <input type="hidden" name="FormType" value={"form3"}/>
-                <input placeholder="Enter you email address" className="footor-l-f-input" type="email" name="email3" required/>
+                <input 
+                  placeholder="Enter you email address" 
+                  className="footor-l-f-input" 
+                  value={newsLetter}
+                  onChange={(e) => setNewLetter(e.target.value)}
+                  type="email" 
+                  name="email3" required/>
                 <button type="submit" ><img src="/Waitlistbtn.png" alt="" /></button>
               </form>
   
@@ -284,7 +336,7 @@ import '../css/mobile/style.css'
             </div>
           </div>
   
-          <p data-aos="fade-up" className="footor-cpwrite" >© 2024 Reciprokel. All rights reserved </p>
+          <p  className="footor-cpwrite" >© 2024 Reciprokel. All rights reserved </p>
         </footer>
         
       </body>

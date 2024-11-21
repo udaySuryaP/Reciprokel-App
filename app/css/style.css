@@ -39,7 +39,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 26vw;
+    width: 30vw;
     background-color: white;
     list-style-type: none;
 }
@@ -54,9 +54,21 @@ body{
     font-weight: 500;
     padding: 10px 0px;
 }
-.navbar-right p{
+.navbar-right{
+    display: flex;
     background-color: white;
-    font-size: 14px;
+    align-items: center;
+}
+.navbar-right p{
+    font-size: 16px;
+    background-color: white;
+    font-weight: 500;
+
+}
+.navbar-right a{
+    text-decoration: none;
+    color: #000E59;
+    background-color: white;
 }
 .navbar-right img{
     display: none;
@@ -459,10 +471,13 @@ text-align: center;
     font-weight: 300;
     left: 30vw;
 }
+.roadmap-addon{
+    display: none;
+}
 .get{
     width: 90vw;
     margin-left: 5vw;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 .get-top p{
     font-size: 58px;
@@ -489,8 +504,8 @@ text-align: center;
 .get-b-top input::placeholder{
     color: #000E59;
     opacity: 1;
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: 200;
 }
 .get-b-b{
     display: flex;
@@ -512,8 +527,8 @@ text-align: center;
 .get-b-b textarea::placeholder{
     color: #000E59;
     opacity: 1;
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: 200;
 }
 .get button{
     background-color: #000E59;
@@ -593,7 +608,7 @@ footer{
 .footor-l-sub-head{
     font-size: 14px;
     font-weight: 500;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .footor-left form{
     display: flex;
