@@ -30,6 +30,7 @@ body{
 }
 .navbar-left p{
     background-color: white;
+    margin-left: -32px;
     font-weight: 600;
     font-size: 24px;
     letter-spacing: -1px;
@@ -44,7 +45,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 30vw;
+    width: 28vw;
     background-color: white;
     list-style-type: none;
 }

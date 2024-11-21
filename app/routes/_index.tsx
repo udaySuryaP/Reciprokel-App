@@ -300,7 +300,7 @@ import '../css/mobile/style.css'
   
           <div data-aos="fade-up" className="footor-container">
             <div className="footor-left">
-              <p className="footor-l-head" >Reciprokel App.</p>
+              <p className="footor-l-head" >Reciprokel App</p>
               <p className="footor-l-sub-head" >Subscribe to receive news and updates.</p>
   
               <form onSubmit={handleSubmit}>
