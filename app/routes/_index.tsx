@@ -321,10 +321,10 @@ import '../css/mobile/style.css'
               <div className="footor-r-left">
                 <p>Company</p>
                 <ul>
-                  <li>Home</li>
-                  <li>About Us</li>
-                  <li>Roadmap</li>
-                  <li>Contact us</li>
+                <li><Link to='/' >Home</Link></li>
+                <li><Link to='/cmsoon' >About us</Link></li>
+                <li><Link to='/cmsoon' >Roadmap</Link></li>
+                <li><Link to='/cmsoon' >Contact Us</Link></li>
                 </ul>
               </div>
               <div className="footor-r-right">

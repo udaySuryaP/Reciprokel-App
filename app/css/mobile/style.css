@@ -89,10 +89,10 @@ body{
 .hero{
     flex: 1;
     max-width: 95vw;
-    height: 60vh;
+    height: 445px;
     margin-left: 10px;
     margin-right: 0px;
-    border-radius: 36px;
+    border-radius: 20px;
     margin-top: 18px;
     color: white;
     position: relative;
@@ -102,7 +102,7 @@ body{
     font-size:28px;
     font-weight: 500;
     position: relative;
-    top: 200px;
+    top: 150px;
     left: 10px;
     letter-spacing: -1px;
     width: fit-content;
@@ -113,11 +113,11 @@ body{
     font-weight: 200;
     max-width: 80vw;
     position: relative;
-    top: 210px;
+    top: 160px;
     left: 10px;
 }
 .hero form{
-    top: 250px;
+    top: 200px;
     left: 10px;
     width: 80vw;
     height: auto;
@@ -139,6 +139,9 @@ body{
 .hero form input::placeholder{
     font-size: 10px;
 }
+.about{
+    margin-top: 30px;
+}
 .about-head{
     font-size: 10px;
 }
@@ -153,7 +156,7 @@ body{
 }   
 
 .fet{
-    margin-top: 0px;
+    margin-top: -20px;
     flex-direction: column;
 }
 .fet p{
@@ -192,6 +195,7 @@ body{
     margin-top: 60px;
     font-size: 18px;
     width: 80%;
+    font-weight: lighter;
 }
 .fet-right-bottom{
     display: none;
@@ -221,14 +225,16 @@ body{
     margin: 5px;
 }
 
-
+.roadmap{
+    margin-top: 20px;
+}
 .roadmap-top-title{
     font-size:10px;
 }
 .roadmap-top-head{
     font-size: 28px;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .roadmap-top-sub-head{
     display: none;
@@ -303,7 +309,7 @@ body{
     width: 90vw;
     margin-left:5vw ;
     overflow-x:hidden ;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .get-top p{
     font-size: 28px;

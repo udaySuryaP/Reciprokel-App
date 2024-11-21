@@ -153,7 +153,7 @@ body{
 .hero form button:hover{
     background-color:white;
     color: #000E59;
-    border: 2px #000E59 solid;
+    border: 1px #000E59 solid;
     
 }
 .about{
@@ -163,7 +163,7 @@ body{
     align-items: center;
     padding: 0px 9vw;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .about-head{
     font-size: 18px;
@@ -172,12 +172,12 @@ body{
 .about-content{
     font-size: 46px;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .about-learn-more{
     background-color: #00000000;
     border: 0px white solid;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 14px;
     display: flex;
     justify-content: center;
@@ -347,11 +347,13 @@ body{
 }
 
 .stayTuned p {
-text-align: center;
+    text-align: center;
+    margin-top: -20px;
 }
 .roadmap{
     margin: 50px 0px ;
     text-align: center;
+    margin-top: 30px;
 }
 .roadmap-top-title{
     font-size: 18px;
@@ -360,7 +362,7 @@ text-align: center;
 .roadmap-top-head{
     font-size: 48px;
     font-weight: 500;
-    margin-top: 48px;
+    margin-top: 28px;
 }
 .roadmap-top-sub-head{
     font-size: 20px;
@@ -404,7 +406,7 @@ text-align: center;
     text-align: left;
     padding: 12px;
     position: relative;
-    top: 133px;
+    top: 153px;
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
@@ -420,7 +422,7 @@ text-align: center;
     text-align: left;
     padding: 12px;
     position: relative;
-    top: 163px;
+    top: 193px;
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
@@ -436,7 +438,7 @@ text-align: center;
     text-align: left;
     padding: 12px;
     position: relative;
-    top: 193px;
+    top: 223px;
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
@@ -452,7 +454,7 @@ text-align: center;
     text-align: left;
     padding: 12px;
     position: relative;
-    top: 213px;
+    top: 253px;
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
@@ -464,15 +466,15 @@ text-align: center;
 .roadmap-b-item-5 p{
     background-color: #4d61f4d6;
     color: white;
-    width: 20vw;
+    width: 16vw;
     text-align: left;
     padding: 12px;
     position: relative;
-    top: 243px;
+    top: 313px;
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
-    left: 30vw;
+    left: 32vw;
 }
 .roadmap-addon{
     display: none;
@@ -480,7 +482,7 @@ text-align: center;
 .get{
     width: 90vw;
     margin-left: 5vw;
-    margin-top: 150px;
+    margin-top: 80px;
 }
 .get-top p{
     font-size: 58px;
@@ -507,8 +509,8 @@ text-align: center;
 .get-b-top input::placeholder{
     color: #000E59;
     opacity: 1;
-    font-size: 18px;
-    font-weight: 200;
+    font-size: 14px;
+    font-weight: lighter;
 }
 .get-b-b{
     display: flex;
@@ -530,8 +532,8 @@ text-align: center;
 .get-b-b textarea::placeholder{
     color: #000E59;
     opacity: 1;
-    font-size: 18px;
-    font-weight: 200;
+    font-size: 14px;
+    font-weight: lighter;
 }
 .get button{
     background-color: #000E59;
@@ -611,7 +613,7 @@ footer{
 .footor-l-sub-head{
     font-size: 14px;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .footor-left form{
     display: flex;
@@ -685,12 +687,20 @@ footer{
 .footor-r-left ul , .footor-r-right ul{
     background-color: white;
 }
-.footor-r-left ul li,.footor-r-right ul li{
+.footor-r-left ul li ,.footor-r-right ul li {
     list-style: none;
     text-decoration: none;
     background-color: white;
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: 300;
+}
+.footor-r-left ul li a,.footor-r-right ul li a{
+    list-style: none;
+    text-decoration: none;
+    background-color: white;
+    margin-top: 8px;
+    font-weight: 300;
+    color: #000E59;
 }
 .footor-cpwrite{
     background-color: white;
