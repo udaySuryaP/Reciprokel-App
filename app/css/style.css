@@ -638,11 +638,22 @@ footer{
 }
 
 .footor-left form button{
-    background-color: white;
+    background-color: #000E59;
+    background-image: url('/Waitlistbtn_light.png');
+    border: 1px #000E59 solid;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 0px white solid;
-    margin: 2px ;
-    margin-bottom: 0px;
+    margin: 0px ;
+    margin-right: 1px;
+    background-size: contain;
+    transition: 0.2s;
+}
+.footor-left form button:hover{
+    background-color: white;
+    border: 1px #000E59 solid;
+    background-image: url('/Waitlistbtn_dark.png');
 }
 .footor-left form img{
     width: 40px;
