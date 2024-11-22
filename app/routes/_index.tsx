@@ -117,6 +117,8 @@ import '../css/mobile/style.css'
 
     const [currentFet,setCurrentFet] = useState(5)
 
+    const [fetOp,setFetOp] = useState(1)
+
     const [newsLetter,setNewLetter] = useState('')
     const navbar_handle = () =>{
       setNavbar(!navbar)
@@ -162,15 +164,18 @@ import '../css/mobile/style.css'
     ]
 
     const fetChangeadd = () =>{
-      if(currentFet == 6){
-        setCurrentFet(1);
-        setFet_Head(fetData[1].head)
-        setFet_Cot(fetData[1].subhead)
-      }else{
-        setCurrentFet(currentFet + 1)
-        setFet_Head(fetData[currentFet + 1].head)
-        setFet_Cot(fetData[currentFet + 1].subhead)
-      }
+      setFetOp(0)
+      
+      setTimeout(()=>{
+        setCurrentFet((prevFet) => {
+          const nextFet = prevFet === 6 ? 1 : prevFet + 1;
+          setFet_Head(fetData[nextFet - 1].head); 
+          setFet_Cot(fetData[nextFet - 1].subhead);
+          return nextFet;
+        });
+        setFetOp(1)
+
+      },500)
     }
     return(
       <body className="container" >
@@ -250,8 +255,8 @@ import '../css/mobile/style.css'
           </div>
           <div className="fet-right">
             <div ref={height} style={{height: div_height ? `${div_height}px` : 'fit-content',}} data-aos="fade-up" className="fet-right-top">
-              <p id="fet_head" className="fet-head" dangerouslySetInnerHTML={{__html: fet_head}} ></p>
-              <p id="fet_cot" className="fet-cot">{fet_cot}</p>
+              <p style={{opacity:fetOp}} className="fet-head" dangerouslySetInnerHTML={{__html: fet_head}} ></p>
+              <p style={{opacity:fetOp}} id="fet_cot" className="fet-cot">{fet_cot}</p>
             </div>
             <div data-aos="fade-up" className="fet-right-bottom">
               <p className="fet-head">Your Campus Community,<br />Digitally Connected</p>

@@ -194,12 +194,15 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition: 0.5s;
 }
 .fet-right-top .fet-head{
     margin-top: 50px;
     margin-bottom: 50px;
     width: 80%;
     font-size: 28px;
+    opacity: 1;
+    transition: 0.2s;
 }
 .fet-right-top .fet-cot{
     margin-bottom: 40px;
@@ -207,6 +210,8 @@ body{
     font-size: 18px;
     width: 80%;
     font-weight: 300;
+    transition: 0.2s;
+    opacity: 1;
 }
 .fet-right-bottom{
     display: none;
