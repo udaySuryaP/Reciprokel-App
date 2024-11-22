@@ -7,6 +7,7 @@ import {
   MetaFunction,
   Outlet
 } from "@remix-run/react";
+import  {Analytics}  from '@vercel/analytics/react';
 import { useEffect } from "react";
 import type { LinksFunction } from "@remix-run/node";
 import AOS from "aos";
@@ -49,6 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
@@ -68,6 +70,7 @@ export default function App() {
     };
     document.body.appendChild(script);
   }, []);
+
 
   return <Outlet />;
 }
