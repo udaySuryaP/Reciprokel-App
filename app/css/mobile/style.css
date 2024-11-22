@@ -32,7 +32,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position:absolute;
     height: 100vh;
     background-color: #000E59;
@@ -46,6 +46,7 @@ body{
 }
 .navbar-center ul li{
     margin-top: 20px;
+    margin-right: 50px;
 }
 .navbar-center ul li a{
     margin-top: 20px;
@@ -82,7 +83,7 @@ body{
     background-color: white;
     border: 0px white solid;
     outline: none;
-    top: 15px;
+    top: 50px;
     transition: 0.2s;
     right: 30px;
     opacity: 0;
