@@ -136,7 +136,7 @@ import '../css/mobile/style.css'
     const [get_msg,setGet_msg] = useState('');
 
     const [fet_head,setFet_Head] = useState('Student Progress, <br/> Visualized Like Never Before') 
-    const [fet_cot,setFet_Cot] = useState('Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights. See how we turn data into growth.') 
+    const [fet_cot,setFet_Cot] = useState('Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights.') 
 
     const [currentFet,setCurrentFet] = useState(5)
 
@@ -387,7 +387,7 @@ import '../css/mobile/style.css'
               <form onSubmit={handleSubmit}>
                 <input type="hidden" name="FormType" value={"form3"}/>
                 <input 
-                  placeholder="Enter you email address" 
+                  placeholder="Enter your email address" 
                   className="footor-l-f-input" 
                   value={newsLetter}
                   onChange={(e) => setNewLetter(e.target.value)}
