@@ -185,7 +185,7 @@ import '../css/mobile/style.css'
         <section data-aos="fade-up" className="about" >
           <p data-aos="fade-up" className="about-head" >ABOUT US</p>
           <p data-aos="fade-up" className="about-content" >Our mission is to <span style={{color:'#4d61f4'}} >transform education</span> and empower growth through technology. We’re dedicated to providing institutions, students, and educators with tools to achieve, engage, and <span style={{color:'#4d61f4'}} >succeed</span> in a dynamic world.</p>
-          <button data-aos="fade-up" className="about-learn-more" >Learn More <img src="/Arrow1.png" alt="" /> </button>
+          <button data-aos="fade-up" className="about-learn-more" > <Link to={'/cmsoon'} >Learn More</Link> <img src="/Arrow1.png" alt="" /> </button>
         </section>
   
         <section  className="fet">
