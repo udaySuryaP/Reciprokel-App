@@ -183,18 +183,22 @@ body{
 .fet-right{
     width: 100%;
     padding: 0px 0px;
-    height: fit-content;
+    height: 52vh;
 }
 
 .fet-right-top{
     flex:1;
     border-radius: 20px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .fet-right-top .fet-head{
     margin-top: 50px;
     margin-bottom: 50px;
-    max-width: 70%;
+    width: 80%;
     font-size: 28px;
 }
 .fet-right-top .fet-cot{
@@ -409,12 +413,12 @@ body{
 
 .footor-left form input{
     flex: 1;
-    width: 40vw;
-    height: 35px;
+    width: 37vw;
+    height: 30px;
 }
 .footor-left form button{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 
 .footor-right{

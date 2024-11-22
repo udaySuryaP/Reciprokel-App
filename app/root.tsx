@@ -71,8 +71,6 @@ export default function App() {
     };
     document.body.appendChild(script);
 
-    
-    
   }, []);
 
 
