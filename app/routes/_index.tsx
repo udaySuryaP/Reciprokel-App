@@ -4,13 +4,18 @@ import {
     useFetcher,
     } from "@remix-run/react";
 import {useState } from "react";
-import React,{useRef} from "react";
+import React,{useRef,useContext} from "react";
 import {db,serverTimestamp,addDoc,collection} from '../firebase.js'
-  
+import { useNavigate } from "@remix-run/react";
+
 import '../css/style.css'
 import '../css/mobile/style.css'
+
+
+
   
   export const action = async ({ request }: any) => {
+
     const formData = new URLSearchParams(await request.text());
     const formType = formData.get('FormType')
   
@@ -84,6 +89,7 @@ import '../css/mobile/style.css'
   
   export default function Index() {
     
+    const navigate = useNavigate()
 
     const [navbar,setNavbar] = useState(false)
 
@@ -120,6 +126,8 @@ import '../css/mobile/style.css'
             setGet_phone('')
             setGet_msg('')
             setNewLetter('')
+            navigate('/cmsoon')
+
           }
         },2000)
       }
@@ -169,7 +177,7 @@ import '../css/mobile/style.css'
                 required
                 placeholder="Enter your email address"
               />
-              <button type="submit">Join the waitlist</button>
+              <button  type="submit">Join the waitlist</button>
           </form>
   
         </section>
