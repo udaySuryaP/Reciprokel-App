@@ -3,7 +3,7 @@ import {
     json, 
     useFetcher,
     } from "@remix-run/react";
-import { useEffect,useState } from "react";
+import {useState } from "react";
 import React,{useRef} from "react";
 import {db,serverTimestamp,addDoc,collection} from '../firebase.js'
   
@@ -83,6 +83,7 @@ import '../css/mobile/style.css'
   
   
   export default function Index() {
+    
 
     const [navbar,setNavbar] = useState(false)
 

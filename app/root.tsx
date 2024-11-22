@@ -66,9 +66,13 @@ export default function App() {
       AOS.init({
         duration: 300,
         once: true,
+        disable: () => window.innerWidth <= 768
       });
     };
     document.body.appendChild(script);
+
+    
+    
   }, []);
 
 

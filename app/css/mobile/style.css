@@ -24,7 +24,10 @@ body{
     position: relative;
     z-index: 1;
 }
-
+.navbar-left{
+    position: relative;
+    left: 30px;
+}
 .navbar-center ul{
     display: flex;
     flex-direction: column;
