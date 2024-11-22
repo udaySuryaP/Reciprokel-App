@@ -366,6 +366,7 @@ body{
     margin: 50px 0px ;
     text-align: center;
     margin-top: 40px;
+    z-index: -1;
 }
 .roadmap-top-title{
     font-size: 18px;
@@ -426,7 +427,7 @@ body{
     font-size: 15px;
     font-weight: 300;
     left: -23vw;
-    z-index: 0;
+    z-index: 1;
 }
 .roadmap-b-item-2{
     background-color: #00000000;
@@ -442,7 +443,7 @@ body{
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
-    z-index: 0;
+    z-index: 1;
     left: -4vw;
 }
 .roadmap-b-item-3{
@@ -459,7 +460,7 @@ body{
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
-    z-index: 0;
+    z-index: 1;
     left: 9vw;
 }
 .roadmap-b-item-4{
@@ -476,7 +477,7 @@ body{
     border-radius: 12px;
     font-size: 15px;
     font-weight: 300;
-    z-index: 0;
+    z-index: 1;
     left: 10vw;
 }
 .roadmap-b-item-5{
@@ -492,7 +493,7 @@ body{
     top: 313px;
     border-radius: 12px;
     font-size: 15px;
-    z-index: 0;
+    z-index: 1;
     font-weight: 300;
     left: 32vw;
 }

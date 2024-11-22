@@ -90,6 +90,8 @@ import '../css/mobile/style.css'
   export default function Index() {
     
     const navigate = useNavigate()
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(()=>{
       if(window.innerWidth <= 768){
@@ -100,8 +102,29 @@ import '../css/mobile/style.css'
         }
       }
     },[])
+    useEffect(() => {
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+  
+        // Hide navbar when scrolling down, show when scrolling up
+        if (currentScrollY > lastScrollY) {
+          setShowNavbar(false);
+        } else {
+          setShowNavbar(true);
+        }
+  
+        setLastScrollY(currentScrollY);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, [lastScrollY]);
 
     const [navbar,setNavbar] = useState(false)
+
 
     const [div_height,setDiv_Height] = useState(100)
 
@@ -184,7 +207,7 @@ import '../css/mobile/style.css'
           <p>Successfully sent</p>
         </section>
   
-        <section data-aos="fade-up" className="navbar">
+        <section style={{top: showNavbar ? "0" : "-100px"}} data-aos="fade-up" className="navbar">
   
           <div className="navbar-left">
             <p><Link to={'/'} >Reciprockel App</Link></p>

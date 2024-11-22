@@ -23,7 +23,8 @@ body{
     margin-top: 15px;
     position: fixed;
     width: 83vw;
-    z-index: 1;
+    z-index: 3;
+    transition: 0.2s;
 }
 .navbar-left{
     position: relative;
@@ -316,9 +317,9 @@ body{
 }
 
 .roadmap-b-item-5 p{
-    width: 60vw;
+    width: 50vw;
     top: 33vh;
-    left: 120vw;
+    left: 110vw;
 }
 
 .get{
