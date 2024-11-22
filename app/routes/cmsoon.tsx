@@ -5,8 +5,8 @@ import { Link } from '@remix-run/react';
 const cmsoon = () =>{
     return(
         <body className='cmsoon-container' >
-            <p>Coming Soon...</p>
-            <Link to='/' > <img src="/Arrow3.png" alt="" /> back</Link>
+            <p>We’re Working on It.</p>
+            <Link to='/' ><img src="/Arrow3.png" alt="" /></Link>
         </body>
     )
 }
