@@ -406,7 +406,12 @@ body{
 
 .footor-left form input{
     flex: 1;
-    width: 50vw;
+    width: 40vw;
+    height: 35px;
+}
+.footor-left form button{
+    width: 35px;
+    height: 35px;
 }
 
 .footor-right{
