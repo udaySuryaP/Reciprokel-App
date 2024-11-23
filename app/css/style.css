@@ -356,11 +356,10 @@ body{
 .staytuned-btns{
     display: none;
 }
-
 .stayTuned p {
     text-align: center;
     font-size: 12px;
-    margin-top: -38px;
+
 }
 .roadmap{
     margin: 50px 0px ;
