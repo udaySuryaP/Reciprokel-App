@@ -3,7 +3,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color: #F1F1F1;
 }
 
 
@@ -43,4 +42,13 @@ body{
 .cmsoon-container img{
     transform: rotate(180deg);
     background-color: #00000000;
+}
+.cmsoon-break {
+    display: none;
+}
+
+@media screen and (max-width : 480px) {
+    .cmsoon-break{
+        display: flex;
+    }
 }
