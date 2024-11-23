@@ -88,6 +88,8 @@ import '../css/mobile/style.css'
   
   
   export default function Index() {
+
+    const sectionRef = useRef<(HTMLElement | null)[]>([]);
     
     const navigate = useNavigate()
     const [showNavbar, setShowNavbar] = useState(true);
@@ -96,9 +98,15 @@ import '../css/mobile/style.css'
     useEffect(()=>{
       if(window.innerWidth <= 768){
         if (height.current) {
-          // setDiv_Height(height.current?.offsetHeight);
           console.log(height.current?.offsetHeight);
           setDiv_Height(height.current.offsetHeight)
+          
+          sectionRef.current.forEach((element) => {
+            if (element) {
+              // Example: Remove an attribute from each element
+              element.removeAttribute("data-aos");
+            }
+          });
         }
       }
     },[])
@@ -212,7 +220,7 @@ import '../css/mobile/style.css'
           <p>Successfully sent</p>
         </section>
   
-        <section style={{top: showNavbar ? "0" : "-100px"}} data-aos="fade-up" className="navbar">
+        <section style={{top: showNavbar ? "0" : "-100px"}} ref={(el) => (sectionRef.current[0] = el)} data-aos="fade-up" className="navbar">
   
           <div className="navbar-left">
             <p><Link to={'/'} >Reciprockel App</Link></p>
@@ -235,7 +243,7 @@ import '../css/mobile/style.css'
   
         </section>
   
-        <section data-aos="fade-up" className="hero" >
+        <section ref={(el) => (sectionRef.current[1] = el)} data-aos="fade-up" className="hero" >
           <p className="hero-head">Revolutionizing Learning <br /> & Professional Growth.</p>
           <p className="hero-sub-head">Unlock the Future of Education with a Platform Designed for Impactful Engagement and Real-World Success.</p>
   
@@ -254,39 +262,39 @@ import '../css/mobile/style.css'
   
         </section>
   
-        <section data-aos="fade-up" className="about" >
-          <p data-aos="fade-up" className="about-head" >ABOUT US</p>
-          <p data-aos="fade-up" className="about-content" >Our mission is to <span style={{color:'#4d61f4'}} >transform education</span> and empower growth through technology. We’re dedicated to providing institutions, students, and educators with tools to achieve, engage, and <span style={{color:'#4d61f4'}} >succeed</span> in a dynamic world.</p>
-          <button data-aos="fade-up" className="about-learn-more" > <Link to={'/cmsoon'} >Learn More</Link> <img src="/Arrow1.png" alt="" /> </button>
+        <section ref={(el) => (sectionRef.current[2] = el)} data-aos="fade-up" className="about" >
+          <p ref={(el) => (sectionRef.current[3] = el)} data-aos="fade-up" className="about-head" >ABOUT US</p>
+          <p ref={(el) => (sectionRef.current[4] = el)} data-aos="fade-up" className="about-content" >Our mission is to <span style={{color:'#4d61f4'}} >transform education</span> and empower growth through technology. We’re dedicated to providing institutions, students, and educators with tools to achieve, engage, and <span style={{color:'#4d61f4'}} >succeed</span> in a dynamic world.</p>
+          <button ref={(el) => (sectionRef.current[5] = el)} data-aos="fade-up" className="about-learn-more" > <Link to={'/cmsoon'} >Learn More</Link> <img src="/Arrow1.png" alt="" /> </button>
         </section>
   
         <section  className="fet">
           <div className="fet-left">
-            <div data-aos="fade-up" className="fet-left-top">
+            <div ref={(el) => (sectionRef.current[6] = el)} data-aos="fade-up" className="fet-left-top">
               <p className="fet-head">AI Insights to Drive Success</p>
               <p className="fet-cot">Harness the power of AI to personalize learning, optimize course recommendations, and enhance student outcomes. Uncover how data-driven insights and adaptive assessments can elevate education at every level.</p>
             </div>
-            <div data-aos="fade-up" className="fet-left-center">
-              <div data-aos="fade-up" className="fet-left-center-left">
+            <div ref={(el) => (sectionRef.current[7] = el)} data-aos="fade-up" className="fet-left-center">
+              <div ref={(el) => (sectionRef.current[8] = el)} data-aos="fade-up" className="fet-left-center-left">
                 <p className="fet-head">Effortless Attendance, Made Smart</p>
                 <p className="fet-cot">Forget roll calls and tedious logs. Our platform revolutionizes attendance with seamless tracking and analytics.</p>
               </div>
-              <div data-aos="fade-up" className="fet-left-center-right">
+              <div ref={(el) => (sectionRef.current[9] = el)} data-aos="fade-up" className="fet-left-center-right">
                 <p className="fet-head">All-in-One<br />for Assignments,<br />Feedback, and More</p>
                 <p className="fet-cot">Streamline assignments, real-time grading, and personalized feedback for effortless student-teacher connection.</p>
               </div>
             </div>
-            <div data-aos="fade-up" className="fet-left-bottom">
+            <div ref={(el) => (sectionRef.current[10] = el)} data-aos="fade-up" className="fet-left-bottom">
               <p className="fet-head">Instant Notifications,<br />Maximum Impact</p>
               <p className="fet-cot">Never miss a beat with real-time alerts for deadlines, grades, events, and more. Our platform keeps everyone informed with customizable push notifications across devices. Discover how we keep communication flowing.</p>
             </div>
           </div>
           <div className="fet-right">
-            <div ref={height} style={{height: div_height ? `${div_height}px` : 'fit-content',backgroundColor:fet_color,color:fet_tColor}} data-aos="fade-up" className="fet-right-top">
+            <div ref={height} style={{height: div_height ? `${div_height}px` : 'fit-content',backgroundColor:fet_color,color:fet_tColor}}  className="fet-right-top">
               <p style={{opacity:fetOp}} className="fet-head" dangerouslySetInnerHTML={{__html: fet_head}} ></p>
               <p style={{opacity:fetOp}} id="fet_cot" className="fet-cot">{fet_cot}</p>
             </div>
-            <div data-aos="fade-up" className="fet-right-bottom">
+            <div ref={(el) => (sectionRef.current[11] = el)} data-aos="fade-up" className="fet-right-bottom">
               <p className="fet-head">Your Campus Community,<br />Digitally Connected</p>
               <p className="fet-cot">Whether it’s group projects, club meetings, or discussion boards, create vibrant communities and collaborative spaces for every need. Dive into an ecosystem that supports both learning and growth beyond the classroom.</p>
             </div>
@@ -294,8 +302,8 @@ import '../css/mobile/style.css'
         </section>
 
         <section className="stayTuned" >
-          <p data-aos="fade-up" >Stay Tuned for More</p>
-          <div data-aos="fade-up" className="staytuned-btns">
+          <p ref={(el) => (sectionRef.current[12] = el)} data-aos="fade-up" >Stay Tuned for More</p>
+          <div ref={(el) => (sectionRef.current[13] = el)} data-aos="fade-up" className="staytuned-btns">
 
             <button onClick={fetChangeadd} >
               <img src="/Arrowbtns.png" alt="" />
@@ -308,7 +316,7 @@ import '../css/mobile/style.css'
           </div>
         </section>
 
-        <section data-aos="fade-up" className="roadmap" >
+        <section ref={(el) => (sectionRef.current[14] = el)} data-aos="fade-up" className="roadmap" >
           <div className="roadmap-top">
             <p className="roadmap-top-title" >ROADMAP</p>
             <p className="roadmap-top-head" >Building a <span style={{color:'#4d61f4'}} >Seamless</span> Learning Experience.</p>
@@ -342,10 +350,10 @@ import '../css/mobile/style.css'
         </section>
   
         <section className="get" >
-          <div data-aos="fade-up" className="get-top">
+          <div ref={(el) => (sectionRef.current[15] = el)} data-aos="fade-up" className="get-top">
             <p>Get in touch, <br /> We'd <span style={{color:'#4d61f4'}} >Love to Hear</span> From You.</p>
           </div>
-          <div data-aos="fade-up" className="get-bottom">
+          <div ref={(el) => (sectionRef.current[16] = el)} data-aos="fade-up" className="get-bottom">
             <fetcher.Form onSubmit={handleSubmit} >
               <input type="hidden" name="FormType" value={"form2"} />
               <div className="get-b-top">
@@ -384,7 +392,7 @@ import '../css/mobile/style.css'
   
         <footer>
   
-          <div data-aos="fade-up" className="footor-container">
+          <div ref={(el) => (sectionRef.current[17] = el)} data-aos="fade-up" className="footor-container">
             <div className="footor-left">
               <p className="footor-l-head" >Reciprokel App</p>
               <p className="footor-l-sub-head" >Subscribe to receive news and updates.</p>
