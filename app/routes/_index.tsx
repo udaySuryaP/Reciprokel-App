@@ -137,6 +137,8 @@ import '../css/mobile/style.css'
 
     const [fet_head,setFet_Head] = useState('Student Progress, <br/> Visualized Like Never Before') 
     const [fet_cot,setFet_Cot] = useState('Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights.') 
+    const [fet_color,setFet_Color] = useState('#ffffff');
+    const [fet_tColor,setFet_Tcolor] = useState('#000E59')
 
     const [currentFet,setCurrentFet] = useState(5)
 
@@ -178,13 +180,14 @@ import '../css/mobile/style.css'
     };
 
     const fetData = [
-      {no : 1,head:'AI Insights to Drive Success',subhead:'Harness the power of AI to personalize learning, optimize course recommendations, and enhance student outcomes. Uncover how data-driven insights and adaptive assessments can elevate education at every level.'},
-      {no : 2,head:'Effortless Attendance, Made Smart',subhead:'Forget roll calls and tedious logs. Our platform revolutionizes attendance with seamless tracking and analytics.'},
-      {no : 3,head:'All-in-Onefor Assignments, <br/> Feedback, and More',subhead:'Streamline assignments, real-time grading, and personalized feedback for effortless student-teacher connection.'},
-      {no : 4,head:'Instant Notifications, <br/> Maximum Impact',subhead:'Never miss a beat with real-time alerts for deadlines, grades, events, and more. Our platform keeps everyone informed with customizable push notifications across devices. Discover how we keep communication flowing.'},
-      {no : 5,head:'Student Progress, Visualized Like Never Before  ',subhead:'Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights. See how we turn data into growth.'},
-      {no : 6,head:'Your Campus Community, Digitally Connected',subhead:'Whether it’s group projects, club meetings, or discussion boards, create vibrant communities and collaborative spaces for every need. Dive into an ecosystem that supports both learning and growth beyond the classroom.'}
+      {no : 1,bgColor:'#000E59',tcolor:'#ffffff',head:'AI Insights to Drive Success',subhead:'Harness the power of AI to personalize learning, optimize course recommendations, and enhance student outcomes. Uncover how data-driven insights and adaptive assessments can elevate education at every level.'},
+      {no : 2,bgColor:'#ffffff',tcolor:'#000E59',head:'Effortless Attendance, Made Smart',subhead:'Forget roll calls and tedious logs. Our platform revolutionizes attendance with seamless tracking and analytics.'},
+      {no : 3,bgColor:'#4d61f4',tcolor:'#ffffff',head:'All-in-Onefor Assignments, <br/> Feedback, and More',subhead:'Streamline assignments, real-time grading, and personalized feedback for effortless student-teacher connection.'},
+      {no : 4,bgColor:'#000E59',tcolor:'#ffffff',head:'Instant Notifications, <br/> Maximum Impact',subhead:'Never miss a beat with real-time alerts for deadlines, grades, events, and more. Our platform keeps everyone informed with customizable push notifications across devices. Discover how we keep communication flowing.'},
+      {no : 5,bgColor:'#ffffff',tcolor:'#000E59',head:'Student Progress, Visualized Like Never Before  ',subhead:'Track academic growth with intuitive dashboards, personalized reports, and in-depth analytics. Dive deeper into performance trends, skill gaps, and strengths, all presented visually for easier insights. See how we turn data into growth.'},
+      {no : 6,bgColor:'#4d61f4',tcolor:'#ffffff',head:'Your Campus Community, Digitally Connected',subhead:'Whether it’s group projects, club meetings, or discussion boards, create vibrant communities and collaborative spaces for every need. Dive into an ecosystem that supports both learning and growth beyond the classroom.'}
     ]
+
 
     const fetChangeadd = () =>{
       setFetOp(0)
@@ -194,6 +197,8 @@ import '../css/mobile/style.css'
           const nextFet = prevFet === 6 ? 1 : prevFet + 1;
           setFet_Head(fetData[nextFet - 1].head); 
           setFet_Cot(fetData[nextFet - 1].subhead);
+          setFet_Color(fetData[nextFet - 1].bgColor);
+          setFet_Tcolor(fetData[nextFet - 1].tcolor)
           return nextFet;
         });
         setFetOp(1)
@@ -277,7 +282,7 @@ import '../css/mobile/style.css'
             </div>
           </div>
           <div className="fet-right">
-            <div ref={height} style={{height: div_height ? `${div_height}px` : 'fit-content',}} data-aos="fade-up" className="fet-right-top">
+            <div ref={height} style={{height: div_height ? `${div_height}px` : 'fit-content',backgroundColor:fet_color,color:fet_tColor}} data-aos="fade-up" className="fet-right-top">
               <p style={{opacity:fetOp}} className="fet-head" dangerouslySetInnerHTML={{__html: fet_head}} ></p>
               <p style={{opacity:fetOp}} id="fet_cot" className="fet-cot">{fet_cot}</p>
             </div>
