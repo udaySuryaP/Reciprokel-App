@@ -1,12 +1,22 @@
 import '../css/cmsoon.css'
-import { Link } from '@remix-run/react';
+import { Link,useLocation,useNavigate } from '@remix-run/react';
 
 
 const cmsoon = () =>{
+
+    const location  = useLocation();
+    const navigate = useNavigate();
+
+    const state = location.state || {};
+
+    console.log(state.from);
+    
+
     return(
         <body className='cmsoon-container' >
             <p>We’re Working on It.</p>
-            <Link to='/' ><img src="/Arrow3.png" alt="" /></Link>
+            <Link to='/' style={{display:state.from == 'index' ? 'none' :'flex'}} ><img src="/Arrow3.png" alt="" /></Link>
+            <button onClick={()=>{navigate('/')}} style={{display:state.from == 'index' ? 'flex' :'none'}} > <img src="/Arrow3.png" alt="" /></button>
         </body>
     )
 }

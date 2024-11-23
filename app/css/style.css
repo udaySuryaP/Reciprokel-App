@@ -14,7 +14,20 @@ body{
     background-color: #F1F1F1;
     color: #000E59;
 }
-
+.noti{
+    position: fixed;
+    top: 10px;
+    right: -400px;
+    transition: 0.5s;
+    z-index: 3;
+}
+.noti p{
+    background-color: red;
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px #000E59 solid;
+    border-left: 5px #4D61F4 solid;
+}
 .navbar{
     display: flex;
     flex-direction: row;
@@ -588,19 +601,7 @@ body{
     margin-top: 3px;
     margin-left: 20px;
 }
-.noti{
-    position: fixed;
-    top: 10px;
-    right: -400px;
-    transition: 0.5s;
-}
-.noti p{
-    background-color: red;
-    padding: 10px 30px;
-    background-color: white;
-    border: 1px #000E59 solid;
-    border-left: 5px #4D61F4 solid;
-}
+
 footer{
     background-color: white;
     margin: 10px;
