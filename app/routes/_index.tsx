@@ -211,7 +211,10 @@ import '../css/mobile/style.css'
     }
     return(
       <body className="container" >
-  
+        <section className="tab_view" >
+          <p className="tab_view_main" >Unsupported Device Detected</p>
+          <p className="tab_view_sub">Thank you for visiting Reciprokel from MonoCL <br /> Currently, our platform is optimized for mobile and desktop devices only. <br /> <br /> For the best experience, please switch to a mobile or desktop device to access our services. <br /> <br />We apologize for any inconvenience and are working to expand compatibility in the future</p>
+        </section>
         <section ref={alert} className="noti" >
           <p>Successfully sent</p>
         </section>
