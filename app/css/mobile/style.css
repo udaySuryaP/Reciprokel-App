@@ -131,11 +131,12 @@ body{
     height: auto;
     display: flex;
     border-radius: 36px;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero form button{
-    width: 150px;
+    min-width: 90px;
     height: 40px;
     padding: 0px 10px;
     font-size: 8px;
@@ -143,6 +144,9 @@ body{
 }
 .hero form input{
     height: 20px;
+    width: 80%;
+    border-radius: 40px;
+    padding-left: 20px;
 }
 .hero form input::placeholder{
     font-size: 10px;

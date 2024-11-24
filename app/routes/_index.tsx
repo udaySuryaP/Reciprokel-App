@@ -6,7 +6,6 @@ import {
 import {useEffect, useState } from "react";
 import React,{useRef,useContext} from "react";
 import {db,serverTimestamp,addDoc,collection} from '../firebase.js'
-import { useNavigate } from "@remix-run/react";
 
 import '../css/style.css'
 import '../css/mobile/style.css'
@@ -91,7 +90,6 @@ import '../css/mobile/style.css'
 
     const sectionRef = useRef<(HTMLElement | null)[]>([]);
     
-    const navigate = useNavigate()
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -179,8 +177,6 @@ import '../css/mobile/style.css'
             setGet_phone('')
             setGet_msg('')
             setNewLetter('')
-            navigate('/cmsoon')
-
           }
         },2000)
       }
@@ -257,7 +253,7 @@ import '../css/mobile/style.css'
                 required
                 placeholder="Enter your email address"
               />
-              <button  type="submit">Join the waitlist</button>
+              <button type="submit">Join the waitlist</button>
           </form>
   
         </section>
