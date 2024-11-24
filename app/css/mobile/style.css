@@ -303,33 +303,33 @@ body{
 }
 
 .roadmap-b-item-1 p{
-    width: 110vw;
-    top: 20vh;
-    left: -70vw;
+    width: 480px;
+    top: 120px;
+    left: -330px;
 }
 
 .roadmap-b-item-2 p{
-    width: 145vw;
-    top: 23vh;
-    left: -18vw;
+    width: 616px;
+    top: 160px;
+    left: -70px;
 }
 
 .roadmap-b-item-3 p{
-    width: 60vw;
-    top: 27vh;
-    left: 27vw;
+    width: 251px;
+    top: 200px;
+    left: 110px;
 }
 
 .roadmap-b-item-4 p{
-    width: 120vw;
-    top: 30vh;
-    left: 45vw;
+    width: 461px;
+    top: 250px;
+    left: 165px;
 }
 
 .roadmap-b-item-5 p{
-    width: 50vw;
-    top: 33vh;
-    left: 110vw;
+    width: 250px;
+    top: 310px;
+    left: 485px;
 }
 
 .get{
