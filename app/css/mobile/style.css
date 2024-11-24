@@ -72,6 +72,10 @@ body{
     border-radius: 10px;
     padding: 10px;
 }
+.for-inv{
+    display: flex;
+    background-color: #000E59;
+}
 .hamBar{
     position: absolute;
     background-color: white;

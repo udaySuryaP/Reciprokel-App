@@ -228,6 +228,7 @@ import '../css/mobile/style.css'
               <li><Link to='/cmsoon' >About us</Link></li>
               <li><Link to='/cmsoon' >Roadmap</Link></li>
               <li><Link to='/cmsoon' >Contact Us</Link></li>
+              <li className="for-inv" ><Link to={'/cmsoon'} >For Investors</Link></li>
             </ul>
           </div>
   

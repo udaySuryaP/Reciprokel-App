@@ -95,6 +95,9 @@ body{
 .navbar-right button{
     visibility: hidden;
 }
+.for-inv{
+    display: none;
+}
 .hero{
     width: 97.5vw;
     height: 84vh;
